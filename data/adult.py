@@ -41,6 +41,6 @@ def save_schema():
     schema = Schema(domains)
     schema.to_json('adult.json')
     
-#save_data()
+save_data()
 save_schema()
 
