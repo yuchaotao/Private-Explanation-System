@@ -4,7 +4,7 @@ sys.path.append('../')
 import json
 import pandas as pd
 
-from privex.basic import Schema, Domain
+from privex.components.basic import Schema, Domain
 
 def generate_schema(df):
     '''
@@ -12,7 +12,7 @@ def generate_schema(df):
     '''
     domains = {}
     # Categorical attributes
-    cat_columns = ['PU_Zone', 'PU_Borough', 'PU_Hour', 'PU_Day', 'DO_Zone', 'DO_Borough', 'DO_Hour', 'DO_Day']
+    cat_columns = ['PU_Zone', 'PU_Borough', 'PU_Hour', 'PU_WeekDay', 'DO_Zone', 'DO_Borough', 'DO_Hour', 'DO_WeekDay']
     for col in cat_columns:
         vals = [str(x) for x in df[col].unique()]
         vmin = None
@@ -20,7 +20,11 @@ def generate_schema(df):
         domain = Domain(col, vmin, vmax, vals)
         domains[col] = domain
         
-    domains['trip_speed'] = Domain('trip_speed', 0, 80, None)
+    domains['trip_speed'] = Domain('trip_speed', 0, 40, None)
+    domains['trip_time'] = Domain('trip_speed', 0, 4000, None)
+    domains['trip_distance'] = Domain('trip_speed', 0, 25, None)
+    domains['tip_amount'] = Domain('trip_speed', 0, 10, None)
+    domains['total_amount'] = Domain('trip_speed', 0, 100, None)
     schema = Schema(domains)
     return schema
 

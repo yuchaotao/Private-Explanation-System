@@ -1,1 +1,3 @@
 *.csv
+**/intermediates/
+*.log

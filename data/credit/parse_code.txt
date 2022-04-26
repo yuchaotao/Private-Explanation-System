@@ -1,0 +1,93 @@
+status cat 4
+A11@no balance or debit
+A12@[0, 200) DM
+A13@>= 200 DM / salary assignments for at least 1 year
+A14@no checking account
+duration num 0
+credit-history cat 5
+A30@no credits taken/ all credits paid back duly
+A31@all credits at this bank paid back duly
+A32@existing credits paid back duly till now
+A33@delay in paying off in the past
+A34@critical account/ other credits existing (not at this bank)
+purpose cat 11
+A40@car (new)
+A41@car (used)
+A42@furniture/equipment
+A43@radio/television
+A44@domestic appliances
+A45@repairs
+A46@education
+A47@(vacation - does not exist?)
+A48@retraining
+A49@business
+A410@others
+credit-amount num 0
+saving-account cat 5
+A61@<100 DM
+A62@[100, 500) DM
+A63@[500, 1000) DM
+A64@>=1000 DM
+A65@unknown/ no savings account
+employment cat 5
+A71@unemployed
+A72@<1 year
+A73@[1, 4) years
+A74@[4, 7) years
+A75@>=7 years
+installment-rate cat 4
+1@>=35%
+2@[25%, 35%)
+3@[20%, 25%)
+4@<20%
+sex-marst cat 5
+A91@male:divorced/separated
+A92@female:divorced/separated/married
+A93@male:single
+A94@male:married/widowed
+A95@female:single
+other-debtors cat 3
+A101@none
+A102@co-applicant
+A103@guarantor
+residence cat 4
+1@<1 year
+2@[1, 4) years
+3@[4, 7) years
+4@>=7 years
+property cat 4
+A121@real estate
+A122@building society savings agreement/ life insurance
+A123@car or other
+A124@unknown / no property
+age num 0
+other-installment-plans cat 3
+A141@bank
+A142@stores
+A143@none
+housing cat 3
+A151@rent
+A152@own
+A153@for free
+existing-credits cat 4
+1@one
+2@two or three
+3@four or five
+4@six or more
+job cat 4
+A171@unemployed/ unskilled - non-resident
+A172@unskilled - resident
+A173@skilled employee / official
+A174@management/ self-employed/ highly qualified employee/ officer
+people-liable cat 2
+1@[0, 2]
+2@>=3
+telephone cat 2
+A191@none
+A192@yes, registered under the customers name
+foreign-worker cat 2
+A201@yes
+A202@no
+good-credit cat 2
+1@1
+2@0
