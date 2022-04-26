@@ -146,5 +146,5 @@ def main():
     taxi_feb_2019_p.to_csv('preprocessed_yellow_tripdata_2019-02-01.csv', index=False)
     
 if __name__ == '__main__':
-    #extract_imbalance()
+    extract_imbalance()
     extract_speed()
