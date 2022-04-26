@@ -1,0 +1,139 @@
+2022-04-21 18:05:42,595 INFO     [meta_explanation_session.py:25] 82 predicates for the explanation.
+2022-04-21 18:05:42,595 INFO     [run.py:53] loaded dataset with 1000000 rows and columns ['status', 'credit-history', 'purpose', 'saving-account', 'employment', 'installment-rate', 'sex-marst', 'other-debtors', 'residence', 'property', 'other-installment-plans', 'housing', 'existing-credits', 'job', 'people-liable', 'telephone', 'foreign-worker', 'good-credit', 'duration', 'credit-amount', 'age'].
+(`status` == "0<= ... < 200 DM")or(`status` == "... >= 200 DM / salary for at least 1 year")
+2022-04-21 18:05:43,101 INFO     [influence_function.py:24] Dataset relative to the question has length 457350
+2022-04-21 18:06:12,714 DEBUG    [meta_explanation_session.py:169] 82 predicates and their influences & scores have been loaded.
+2022-04-21 18:06:12,723 DEBUG    [meta_explanation_session.py:173] 
+       influence        score
+count  82.000000    82.000000
+mean    0.000003     1.152964
+std     0.001912   752.104965
+min    -0.005751 -2262.526990
+25%    -0.000500  -196.778005
+50%     0.000000     0.000000
+75%     0.000420   165.206135
+max     0.007772  3057.686699
+2022-04-21 18:06:12,723 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:06:12,723 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:06:12,723 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:06:12,723 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:06:12,723 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:06:12,723 INFO     [noisy_topk.py:25] true_topk_scores: [3057.6866991121433, 2853.246152248297, 1527.0749567392058, 1135.910659577902, 1104.0092832687549]
+2022-04-21 18:06:12,723 INFO     [noisy_topk.py:26] gumbel_topk_scores: [3253.253583762223, 2831.061521012739, 1569.4218855988895, 1152.3213924422782, 1359.4865944981918]
+2022-04-21 18:06:12,723 DEBUG    [meta_explanation_session.py:244] [`job` == "unskilled - resident", `property` == "unknown / no property", `credit-history` == "all credits at this bank paid back duly", `property` == "real estate", `employment` == "1 <= ... < 4 yrs"]
+2022-04-21 18:06:12,724 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:06:15,640 DEBUG    [meta_explanation_session.py:261] [(0.007623514446663473, 0.008010609593032287), (0.007044368937672418, 0.007413990774333226), (0.0036927090506438127, 0.0040536457204356675), (0.0026321760799279015, 0.0030201269802763078), (0.002724132199999849, 0.0030768131770616304)]
+2022-04-21 18:06:15,640 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:06:15,641 DEBUG    [meta_explanation_session.py:280] [(1, 2), (1, 2), (2, 5), (1, 5), (2, 10)]
+2022-04-21 18:06:16,689 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:06:16,689 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:06:16,689 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:06:16,689 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:06:16,689 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:06:16,690 INFO     [noisy_topk.py:25] true_topk_scores: [3057.6866991121433, 2853.246152248297, 1527.0749567392058, 1135.910659577902, 1104.0092832687549]
+2022-04-21 18:06:16,690 INFO     [noisy_topk.py:26] gumbel_topk_scores: [3064.9317716547785, 2840.959126481606, 1562.8937463083655, 1203.906105011369, 1131.9492944168612]
+2022-04-21 18:06:16,690 DEBUG    [meta_explanation_session.py:244] [`job` == "unskilled - resident", `property` == "unknown / no property", `credit-history` == "all credits at this bank paid back duly", `employment` == "1 <= ... < 4 yrs", `property` == "real estate"]
+2022-04-21 18:06:16,690 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:06:19,726 DEBUG    [meta_explanation_session.py:261] [(0.007643326537943097, 0.008030287157657271), (0.007100210402782201, 0.007469837643861594), (0.00367536301640844, 0.004036182418454426), (0.002695544441881437, 0.0030481111273449367), (0.0025917859854428077, 0.0029797377467161643)]
+2022-04-21 18:06:19,726 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:06:19,727 DEBUG    [meta_explanation_session.py:280] [(1, 2), (1, 2), (1, 5), (2, 10), (4, 10)]
+2022-04-21 18:06:20,761 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:06:20,761 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:06:20,761 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:06:20,761 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:06:20,761 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:06:20,762 INFO     [noisy_topk.py:25] true_topk_scores: [3057.6866991121433, 2853.246152248297, 1527.0749567392058, 1135.910659577902, 1104.0092832687549]
+2022-04-21 18:06:20,762 INFO     [noisy_topk.py:26] gumbel_topk_scores: [3108.371289893244, 2884.913258521132, 1486.8323067243527, 1107.3920832501385, 1077.595824367109]
+2022-04-21 18:06:20,762 DEBUG    [meta_explanation_session.py:244] [`job` == "unskilled - resident", `property` == "unknown / no property", `credit-history` == "all credits at this bank paid back duly", `employment` == "1 <= ... < 4 yrs", `property` == "real estate"]
+2022-04-21 18:06:20,762 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:06:23,904 DEBUG    [meta_explanation_session.py:261] [(0.007548812004216017, 0.007935709518114797), (0.007051666747589988, 0.0074212407781277575), (0.0037122894723681595, 0.004073240180720324), (0.002734450191748956, 0.003086995135586502), (0.0025610190423569113, 0.0029489927867020977)]
+2022-04-21 18:06:23,904 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:06:23,905 DEBUG    [meta_explanation_session.py:280] [(1, 2), (1, 2), (2, 4), (2, 12), (1, 10)]
+2022-04-21 18:06:24,947 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:06:24,947 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:06:24,947 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:06:24,947 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:06:24,947 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:06:24,947 INFO     [noisy_topk.py:25] true_topk_scores: [3057.6866991121433, 2853.246152248297, 1527.0749567392058, 1135.910659577902, 1104.0092832687549]
+2022-04-21 18:06:24,947 INFO     [noisy_topk.py:26] gumbel_topk_scores: [3044.8753055439065, 2819.7030702713914, 1502.9122922987028, 1117.74336553856, 1178.2862744618506]
+2022-04-21 18:06:24,947 DEBUG    [meta_explanation_session.py:244] [`job` == "unskilled - resident", `property` == "unknown / no property", `credit-history` == "all credits at this bank paid back duly", `property` == "real estate", `employment` == "1 <= ... < 4 yrs"]
+2022-04-21 18:06:24,947 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:06:28,78 DEBUG    [meta_explanation_session.py:261] [(0.007617377668573459, 0.008004347543416846), (0.007052411391254629, 0.007422015980218121), (0.0036864118832055045, 0.004047165070817641), (0.0026373882282622685, 0.0030254500527626452), (0.002680384980264884, 0.00303295639294605)]
+2022-04-21 18:06:28,78 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:06:28,79 DEBUG    [meta_explanation_session.py:280] [(1, 2), (1, 2), (2, 4), (2, 10), (2, 7)]
+2022-04-21 18:06:29,116 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:06:29,117 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:06:29,117 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:06:29,117 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:06:29,117 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:06:29,117 INFO     [noisy_topk.py:25] true_topk_scores: [3057.6866991121433, 2853.246152248297, 1527.0749567392058, 1135.910659577902, 1104.0092832687549]
+2022-04-21 18:06:29,117 INFO     [noisy_topk.py:26] gumbel_topk_scores: [3085.8423013126644, 2842.118646535505, 1515.9922899407452, 1130.9570431259867, 1094.6419101216325]
+2022-04-21 18:06:29,117 DEBUG    [meta_explanation_session.py:244] [`job` == "unskilled - resident", `property` == "unknown / no property", `credit-history` == "all credits at this bank paid back duly", `employment` == "1 <= ... < 4 yrs", `property` == "real estate"]
+2022-04-21 18:06:29,117 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:06:32,251 DEBUG    [meta_explanation_session.py:261] [(0.007583644969480329, 0.007970588079712902), (0.007117556438543787, 0.00748727924166928), (0.0036417039717537808, 0.004002463637226354), (0.00271825349397099, 0.0030707939818314634), (0.00261954943482075, 0.003007576489695138)]
+2022-04-21 18:06:32,251 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:06:32,252 DEBUG    [meta_explanation_session.py:280] [(1, 2), (1, 2), (1, 4), (2, 10), (1, 10)]
+2022-04-21 18:06:33,280 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:06:33,280 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:06:33,282 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:06:33,282 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:06:33,282 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:06:33,283 INFO     [noisy_topk.py:25] true_topk_scores: [3057.6866991121433, 2853.246152248297, 1527.0749567392058, 1135.910659577902, 1104.0092832687549]
+2022-04-21 18:06:33,283 INFO     [noisy_topk.py:26] gumbel_topk_scores: [3057.081416281964, 2944.1656314908882, 1492.3357961046106, 1125.8544035467983, 1110.1294437887489]
+2022-04-21 18:06:33,283 DEBUG    [meta_explanation_session.py:244] [`job` == "unskilled - resident", `property` == "unknown / no property", `credit-history` == "all credits at this bank paid back duly", `employment` == "1 <= ... < 4 yrs", `property` == "real estate"]
+2022-04-21 18:06:33,283 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:06:36,419 DEBUG    [meta_explanation_session.py:261] [(0.007555667462026068, 0.007942613808802224), (0.007096677782463714, 0.007466323784588203), (0.0037025694804872114, 0.004063553517989261), (0.0027140245118426895, 0.0030666601886631508), (0.0026258392862407256, 0.0030139397558629454)]
+2022-04-21 18:06:36,420 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:06:36,420 DEBUG    [meta_explanation_session.py:280] [(1, 2), (1, 2), (1, 5), (2, 8), (2, 5)]
+2022-04-21 18:06:37,458 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:06:37,458 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:06:37,458 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:06:37,458 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:06:37,458 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:06:37,458 INFO     [noisy_topk.py:25] true_topk_scores: [3057.6866991121433, 2853.246152248297, 1527.0749567392058, 1135.910659577902, 1104.0092832687549]
+2022-04-21 18:06:37,459 INFO     [noisy_topk.py:26] gumbel_topk_scores: [3087.436075924424, 2856.222042685285, 1529.9983464959207, 1167.596542220713, 1101.0525017643884]
+2022-04-21 18:06:37,459 DEBUG    [meta_explanation_session.py:244] [`job` == "unskilled - resident", `property` == "unknown / no property", `credit-history` == "all credits at this bank paid back duly", `employment` == "1 <= ... < 4 yrs", `property` == "real estate"]
+2022-04-21 18:06:37,459 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:06:40,655 DEBUG    [meta_explanation_session.py:261] [(0.007562163254146934, 0.00794918494278797), (0.00704380093984483, 0.007413526316499733), (0.003743134754144729, 0.004104048373311908), (0.0026631625398101898, 0.0030156718119036174), (0.002606564128951035, 0.0029946148076052865)]
+2022-04-21 18:06:40,655 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:06:40,656 DEBUG    [meta_explanation_session.py:280] [(1, 2), (1, 2), (1, 5), (2, 8), (1, 10)]
+2022-04-21 18:06:41,692 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:06:41,692 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:06:41,692 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:06:41,692 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:06:41,692 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:06:41,692 INFO     [noisy_topk.py:25] true_topk_scores: [3057.6866991121433, 2853.246152248297, 1527.0749567392058, 1135.910659577902, 1104.0092832687549]
+2022-04-21 18:06:41,693 INFO     [noisy_topk.py:26] gumbel_topk_scores: [3092.4802712485284, 2850.0956733054104, 1556.5518144011555, 1160.2078102088776, 1098.8873773159596]
+2022-04-21 18:06:41,693 DEBUG    [meta_explanation_session.py:244] [`job` == "unskilled - resident", `property` == "unknown / no property", `credit-history` == "all credits at this bank paid back duly", `employment` == "1 <= ... < 4 yrs", `property` == "real estate"]
+2022-04-21 18:06:41,693 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:06:44,886 DEBUG    [meta_explanation_session.py:261] [(0.007627523680200719, 0.008014597561008597), (0.007061289120406995, 0.0074310672135124295), (0.0037331479727024794, 0.0040939789411628), (0.002696419391038687, 0.003048931624955795), (0.002618966850435717, 0.0030069602171759824)]
+2022-04-21 18:06:44,886 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:06:44,887 DEBUG    [meta_explanation_session.py:280] [(1, 2), (1, 2), (1, 5), (2, 7), (2, 10)]
+2022-04-21 18:06:45,964 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:06:45,964 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:06:45,966 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:06:45,966 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:06:45,966 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:06:45,967 INFO     [noisy_topk.py:25] true_topk_scores: [3057.6866991121433, 2853.246152248297, 1527.0749567392058, 1135.910659577902, 1104.0092832687549]
+2022-04-21 18:06:45,967 INFO     [noisy_topk.py:26] gumbel_topk_scores: [3036.1972288570378, 2906.5609883543552, 1566.1635983473986, 1097.6568455570791, 1127.827458540538]
+2022-04-21 18:06:45,967 DEBUG    [meta_explanation_session.py:244] [`job` == "unskilled - resident", `property` == "unknown / no property", `credit-history` == "all credits at this bank paid back duly", `property` == "real estate", `employment` == "1 <= ... < 4 yrs"]
+2022-04-21 18:06:45,967 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:06:49,294 DEBUG    [meta_explanation_session.py:261] [(0.007570431147409352, 0.007957450969959206), (0.007095186243359715, 0.007464934891385873), (0.0036873642629001438, 0.004048292118843229), (0.002628295704101776, 0.003016183836057534), (0.0027070684548478447, 0.0030596251672453303)]
+2022-04-21 18:06:49,294 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:06:49,295 DEBUG    [meta_explanation_session.py:280] [(1, 2), (1, 2), (2, 5), (1, 10), (2, 10)]
+2022-04-21 18:06:50,422 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:06:50,422 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:06:50,422 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:06:50,422 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:06:50,422 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:06:50,423 INFO     [noisy_topk.py:25] true_topk_scores: [3057.6866991121433, 2853.246152248297, 1527.0749567392058, 1135.910659577902, 1104.0092832687549]
+2022-04-21 18:06:50,423 INFO     [noisy_topk.py:26] gumbel_topk_scores: [3032.257276378216, 2826.470842494089, 1528.0242975131828, 1171.1103616466442, 1154.9766463989777]
+2022-04-21 18:06:50,423 DEBUG    [meta_explanation_session.py:244] [`job` == "unskilled - resident", `property` == "unknown / no property", `credit-history` == "all credits at this bank paid back duly", `employment` == "1 <= ... < 4 yrs", `property` == "real estate"]
+2022-04-21 18:06:50,423 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:06:53,773 DEBUG    [meta_explanation_session.py:261] [(0.007618908344079694, 0.008005888298347306), (0.007092404392271152, 0.007462149155674655), (0.0036914552245929733, 0.0040521935102397315), (0.0027137551352022253, 0.0030664814458574385), (0.0026352018534646, 0.003023253759349038)]
+2022-04-21 18:06:53,773 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:06:53,774 DEBUG    [meta_explanation_session.py:280] [(1, 2), (1, 2), (2, 4), (2, 10), (2, 7)]
+2022-04-21 18:06:55,98 INFO     [meta_explanation_session.py:25] 82 predicates for the explanation.
+2022-04-21 18:06:55,98 INFO     [run.py:53] loaded dataset with 1000000 rows and columns ['status', 'credit-history', 'purpose', 'saving-account', 'employment', 'installment-rate', 'sex-marst', 'other-debtors', 'residence', 'property', 'other-installment-plans', 'housing', 'existing-credits', 'job', 'people-liable', 'telephone', 'foreign-worker', 'good-credit', 'duration', 'credit-amount', 'age'].
+(`duration` == "< 1 yr")or(`duration` == "1 <= ... < 4 yrs")
+2022-04-21 18:06:55,834 INFO     [influence_function.py:24] Dataset relative to the question has length 982634

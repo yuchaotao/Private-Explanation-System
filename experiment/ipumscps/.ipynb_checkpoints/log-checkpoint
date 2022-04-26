@@ -1,0 +1,6 @@
+None
+2022-04-11 16:35:30,826 INFO     [ipumscps.py:166] loaded dataset with 1146552 rows.
+2022-04-11 16:35:30,840 INFO     [utils.py:141] NumExpr defaulting to 8 threads.
+2022-04-11 16:35:31,812 INFO     [ipumscps.py:178] submited queries with rho = 0.1
+(`RELATE` == "Head/householder")or(`RELATE` == "Child")
+2022-04-11 16:35:31,892 INFO     [influence_function.py:24] Dataset relative to the question has length 724869

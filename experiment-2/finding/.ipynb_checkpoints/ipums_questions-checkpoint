@@ -1,0 +1,84 @@
+2022-04-21 18:06:00,693 INFO     [meta_explanation_session.py:25] 97 predicates for the explanation.
+2022-04-21 18:06:00,693 INFO     [run.py:53] loaded dataset with 1146552 rows and columns ['RELATE', 'SEX', 'RACE', 'MARST', 'CITIZEN', 'CLASSWKR', 'EDUC', 'OCC', 'AGE', 'INCTOT'].
+(`RELATE` == "Head/householder")or(`RELATE` == "Spouse")
+2022-04-21 18:06:01,798 INFO     [influence_function.py:24] Dataset relative to the question has length 863833
+2022-04-21 18:06:44,565 DEBUG    [meta_explanation_session.py:169] 97 predicates and their influences & scores have been loaded.
+2022-04-21 18:06:44,574 DEBUG    [meta_explanation_session.py:173] 
+        influence         score
+count   97.000000  9.700000e+01
+mean    12.967588  7.790953e+06
+std    133.323701  8.010115e+07
+min   -615.153107 -3.695852e+08
+25%      0.000000  0.000000e+00
+50%      0.000000  0.000000e+00
+75%      2.826341  1.698071e+06
+max    699.829901  4.204592e+08
+2022-04-21 18:06:44,574 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:06:44,575 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:06:44,575 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:06:44,575 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:06:44,575 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:06:44,575 INFO     [noisy_topk.py:25] true_topk_scores: [420459204.1169734, 324734027.4409422, 240157322.61998594, 226326224.0330098, 141147171.55362678]
+2022-04-21 18:06:44,575 INFO     [noisy_topk.py:26] gumbel_topk_scores: [418107362.57705027, 323859545.82352245, 238967961.76873824, 222499487.26866594, 136041958.87510863]
+2022-04-21 18:06:44,575 DEBUG    [meta_explanation_session.py:244] [`MARST` == "Never married/single", `MARST` == "Widowed", `RACE` == "Black", `CLASSWKR` == "Wage/salary, private", `CITIZEN` == "Born in U.S"]
+2022-04-21 18:06:44,575 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:06:52,302 DEBUG    [meta_explanation_session.py:261] [(675.1944779886472, 723.3614005099029), (517.7844762843602, 564.7763015908035), (380.2661029318407, 425.3126246759456), (358.32460323521923, 391.2779676118825), (219.5963820911406, 247.52890963950463)]
+2022-04-21 18:06:52,302 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:06:52,303 DEBUG    [meta_explanation_session.py:280] [(1, 3), (1, 3), (1, 5), (1, 5), (2, 12)]
+2022-04-21 18:06:54,765 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:06:54,765 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:06:54,765 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:06:54,765 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:06:54,765 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:06:54,766 INFO     [noisy_topk.py:25] true_topk_scores: [420459204.1169734, 324734027.4409422, 240157322.61998594, 226326224.0330098, 141147171.55362678]
+2022-04-21 18:06:54,766 INFO     [noisy_topk.py:26] gumbel_topk_scores: [424925469.0748047, 329149650.6675715, 239456688.33324963, 234068855.65138966, 136933152.94057083]
+2022-04-21 18:06:54,766 DEBUG    [meta_explanation_session.py:244] [`MARST` == "Never married/single", `MARST` == "Widowed", `RACE` == "Black", `CLASSWKR` == "Wage/salary, private", `CITIZEN` == "Born in U.S"]
+2022-04-21 18:06:54,766 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:07:02,621 DEBUG    [meta_explanation_session.py:261] [(672.1919927506053, 720.358803039389), (512.3083506264093, 559.2974438195375), (383.72248311283533, 428.77064851720144), (363.37516389694474, 396.3336583064468), (216.03723611572457, 243.96539447083342)]
+2022-04-21 18:07:02,621 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:07:02,622 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 5), (1, 5), (1, 5), (2, 9)]
+2022-04-21 18:07:05,85 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:07:05,85 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:07:05,85 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:07:05,85 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:07:05,86 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:07:05,86 INFO     [noisy_topk.py:25] true_topk_scores: [420459204.1169734, 324734027.4409422, 240157322.61998594, 226326224.0330098, 141147171.55362678]
+2022-04-21 18:07:05,86 INFO     [noisy_topk.py:26] gumbel_topk_scores: [426133422.2227927, 319079258.32079804, 237153182.82808822, 224465761.2129998, 140912744.23501447]
+2022-04-21 18:07:05,86 DEBUG    [meta_explanation_session.py:244] [`MARST` == "Never married/single", `MARST` == "Widowed", `RACE` == "Black", `CLASSWKR` == "Wage/salary, private", `CITIZEN` == "Born in U.S"]
+2022-04-21 18:07:05,86 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:07:12,823 DEBUG    [meta_explanation_session.py:261] [(675.3914878657451, 723.5578018677908), (520.3626676694972, 567.3549302763032), (378.61392031683977, 423.658350404551), (356.53997114254554, 389.4935690104404), (216.8057915271668, 244.73006975345064)]
+2022-04-21 18:07:12,823 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:07:12,824 DEBUG    [meta_explanation_session.py:280] [(1, 3), (1, 3), (2, 5), (2, 5), (1, 9)]
+2022-04-21 18:07:15,293 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:07:15,293 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:07:15,293 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:07:15,293 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:07:15,293 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:07:15,294 INFO     [noisy_topk.py:25] true_topk_scores: [420459204.1169734, 324734027.4409422, 240157322.61998594, 226326224.0330098, 141147171.55362678]
+2022-04-21 18:07:15,294 INFO     [noisy_topk.py:26] gumbel_topk_scores: [412645738.17170143, 335796732.38002205, 239675861.85936406, 222233911.8667495, 153151943.87410077]
+2022-04-21 18:07:15,294 DEBUG    [meta_explanation_session.py:244] [`MARST` == "Never married/single", `MARST` == "Widowed", `RACE` == "Black", `CLASSWKR` == "Wage/salary, private", `CITIZEN` == "Born in U.S"]
+2022-04-21 18:07:15,294 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:07:23,29 DEBUG    [meta_explanation_session.py:261] [(678.8482611504596, 727.0128725999149), (512.4303731457145, 559.4218059335805), (376.8703462501093, 421.91411808711604), (359.2798704960787, 392.2320789807392), (224.95856384540446, 252.885342654592)]
+2022-04-21 18:07:23,29 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:07:23,30 DEBUG    [meta_explanation_session.py:280] [(1, 3), (1, 3), (1, 5), (1, 5), (1, 8)]
+2022-04-21 18:07:25,464 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:07:25,464 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:07:25,464 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:07:25,464 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:07:25,464 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:07:25,465 INFO     [noisy_topk.py:25] true_topk_scores: [420459204.1169734, 324734027.4409422, 240157322.61998594, 226326224.0330098, 141147171.55362678]
+2022-04-21 18:07:25,465 INFO     [noisy_topk.py:26] gumbel_topk_scores: [433447612.04018354, 332587706.63613415, 241580944.93030775, 225223624.61995685, 153696465.16896358]
+2022-04-21 18:07:25,465 DEBUG    [meta_explanation_session.py:244] [`MARST` == "Never married/single", `MARST` == "Widowed", `RACE` == "Black", `CLASSWKR` == "Wage/salary, private", `CITIZEN` == "Born in U.S"]
+2022-04-21 18:07:25,465 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:07:33,192 DEBUG    [meta_explanation_session.py:261] [(677.3245578813281, 725.4906384150138), (512.2394912578206, 559.2256829882539), (379.41427937619784, 424.46101817605165), (356.0105493281812, 388.9663276007926), (215.63997206148886, 243.5667410407098)]
+2022-04-21 18:07:33,192 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:07:33,193 DEBUG    [meta_explanation_session.py:280] [(1, 3), (1, 3), (1, 5), (1, 5), (1, 33)]
+2022-04-21 18:07:35,661 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:07:35,661 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:07:35,661 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:07:35,661 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:07:35,662 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:07:35,662 INFO     [noisy_topk.py:25] true_topk_scores: [420459204.1169734, 324734027.4409422, 240157322.61998594, 226326224.0330098, 141147171.55362678]
+2022-04-21 18:07:35,662 INFO     [noisy_topk.py:26] gumbel_topk_scores: [420099585.66322255, 329006962.13262343, 228690478.0544488, 228719910.58919975, 154782772.6746255]
+2022-04-21 18:07:35,662 DEBUG    [meta_explanation_session.py:244] [`MARST` == "Never married/single", `MARST` == "Widowed", `CLASSWKR` == "Wage/salary, private", `RACE` == "Black", `CITIZEN` == "Born in U.S"]
+2022-04-21 18:07:35,662 INFO     [meta_explanation_session.py:250] computing influence ci

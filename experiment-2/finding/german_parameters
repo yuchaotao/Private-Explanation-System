@@ -1,0 +1,897 @@
+2022-04-21 18:06:19,557 INFO     [meta_explanation_session.py:25] 82 predicates for the explanation.
+2022-04-21 18:06:19,557 INFO     [run.py:53] loaded dataset with 1000000 rows and columns ['status', 'credit-history', 'purpose', 'saving-account', 'employment', 'installment-rate', 'sex-marst', 'other-debtors', 'residence', 'property', 'other-installment-plans', 'housing', 'existing-credits', 'job', 'people-liable', 'telephone', 'foreign-worker', 'good-credit', 'duration', 'credit-amount', 'age'].
+(`status` == "no checking account")or(`status` == "... < 0 DM")
+2022-04-21 18:06:20,208 INFO     [influence_function.py:24] Dataset relative to the question has length 542650
+2022-04-21 18:07:00,226 DEBUG    [meta_explanation_session.py:169] 82 predicates and their influences & scores have been loaded.
+2022-04-21 18:07:00,236 DEBUG    [meta_explanation_session.py:173] 
+          influence         score
+count     82.000000     82.000000
+mean     -21.852589    -21.852589
+std     3958.889308   3958.889308
+min   -13569.634102 -13569.634102
+25%     -781.250941   -781.250941
+50%     -492.872969   -492.872969
+75%     -154.947325   -154.947325
+max    28466.274792  28466.274792
+2022-04-21 18:07:00,236 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:07:00,236 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:07:00,236 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:07:00,236 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:07:00,236 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:07:00,237 INFO     [noisy_topk.py:25] true_topk_scores: [28466.274791968295, 13325.635151142895, 7488.270064639729, 3006.623634449173, 52.77297854604484]
+2022-04-21 18:07:00,237 INFO     [noisy_topk.py:26] gumbel_topk_scores: [28469.41142417261, 13357.971724270494, 7493.37908021475, 3007.7920158221273, 50.061062031984946]
+2022-04-21 18:07:00,237 DEBUG    [meta_explanation_session.py:244] [`saving-account` == "... <  100 DM", `saving-account` == "... >= 1000 DM", `saving-account` == "500 <= ... < 1000 DM", `saving-account` == "100 <= ... <  500 DM", `age` == "(60, 70]"]
+2022-04-21 18:07:00,237 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:07:03,63 DEBUG    [meta_explanation_session.py:261] [(28445.160704210557, 28497.752056645153), (13290.236916823014, 13342.82826925761), (7445.166802282864, 7497.758154717459), (2990.077049489597, 3042.668401924192), (-5.188933064601748, 47.40241936999316)]
+2022-04-21 18:07:03,63 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:07:03,64 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (4, 4), (4, 20)]
+2022-04-21 18:07:04,219 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:07:04,220 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:07:04,220 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:07:04,220 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:07:04,220 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:07:04,220 INFO     [noisy_topk.py:25] true_topk_scores: [28466.274791968295, 13325.635151142895, 7488.270064639729, 3006.623634449173, 52.77297854604484]
+2022-04-21 18:07:04,220 INFO     [noisy_topk.py:26] gumbel_topk_scores: [28467.487823783504, 13323.888122046566, 7495.034954078804, 3010.839572999692, 63.43343410738573]
+2022-04-21 18:07:04,220 DEBUG    [meta_explanation_session.py:244] [`saving-account` == "... <  100 DM", `saving-account` == "... >= 1000 DM", `saving-account` == "500 <= ... < 1000 DM", `saving-account` == "100 <= ... <  500 DM", `age` == "(70, 80]"]
+2022-04-21 18:07:04,220 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:07:07,126 DEBUG    [meta_explanation_session.py:261] [(28428.053185037323, 28480.64453747192), (13302.48117528657, 13355.072527721166), (7458.453280857859, 7511.044633292453), (2978.2226343452267, 3030.813986779822), (20.328629309266276, 72.91998174386119)]
+2022-04-21 18:07:07,127 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:07:07,127 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (4, 4), (4, 15)]
+2022-04-21 18:07:08,306 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:07:08,306 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:07:08,306 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:07:08,306 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:07:08,306 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:07:08,307 INFO     [noisy_topk.py:25] true_topk_scores: [28466.274791968295, 13325.635151142895, 7488.270064639729, 3006.623634449173, 52.77297854604484]
+2022-04-21 18:07:08,307 INFO     [noisy_topk.py:26] gumbel_topk_scores: [28484.536494691598, 13325.171724125446, 7507.909633140007, 3073.7446810053325, 52.23955011987429]
+2022-04-21 18:07:08,307 DEBUG    [meta_explanation_session.py:244] [`saving-account` == "... <  100 DM", `saving-account` == "... >= 1000 DM", `saving-account` == "500 <= ... < 1000 DM", `saving-account` == "100 <= ... <  500 DM", `age` == "(70, 80]"]
+2022-04-21 18:07:08,307 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:07:11,176 DEBUG    [meta_explanation_session.py:261] [(28433.980451495616, 28486.571803930212), (13305.320121767292, 13357.911474201888), (7462.139835894547, 7514.731188329141), (2982.725670353358, 3035.317022787953), (46.639328918395506, 99.23068135299042)]
+2022-04-21 18:07:11,176 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:07:11,177 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (4, 4), (4, 15)]
+2022-04-21 18:07:12,321 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:07:12,321 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:07:12,321 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:07:12,321 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:07:12,321 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:07:12,321 INFO     [noisy_topk.py:25] true_topk_scores: [28466.274791968295, 13325.635151142895, 7488.270064639729, 3006.623634449173, 52.77297854604484]
+2022-04-21 18:07:12,321 INFO     [noisy_topk.py:26] gumbel_topk_scores: [28479.008906525392, 13321.134338058162, 7483.560075230624, 3012.8575434806307, 55.819052546272005]
+2022-04-21 18:07:12,321 DEBUG    [meta_explanation_session.py:244] [`saving-account` == "... <  100 DM", `saving-account` == "... >= 1000 DM", `saving-account` == "500 <= ... < 1000 DM", `saving-account` == "100 <= ... <  500 DM", `age` == "(70, 80]"]
+2022-04-21 18:07:12,321 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:07:15,136 DEBUG    [meta_explanation_session.py:261] [(28439.48424790655, 28492.075600341144), (13298.529536022139, 13351.120888456735), (7451.738455400737, 7504.329807835331), (2989.638857944506, 3042.230210379101), (51.16874001662963, 103.76009245122454)]
+2022-04-21 18:07:15,136 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:07:15,137 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (4, 4), (4, 15)]
+2022-04-21 18:07:16,314 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:07:16,314 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:07:16,314 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:07:16,314 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:07:16,314 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:07:16,315 INFO     [noisy_topk.py:25] true_topk_scores: [28466.274791968295, 13325.635151142895, 7488.270064639729, 3006.623634449173, 52.77297854604484]
+2022-04-21 18:07:16,315 INFO     [noisy_topk.py:26] gumbel_topk_scores: [28471.59345115996, 13336.305849593044, 7506.316673028803, 3011.047912693487, 49.130297607602536]
+2022-04-21 18:07:16,315 DEBUG    [meta_explanation_session.py:244] [`saving-account` == "... <  100 DM", `saving-account` == "... >= 1000 DM", `saving-account` == "500 <= ... < 1000 DM", `saving-account` == "100 <= ... <  500 DM", `age` == "(70, 80]"]
+2022-04-21 18:07:16,315 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:07:19,167 DEBUG    [meta_explanation_session.py:261] [(28462.248360094767, 28514.839712529363), (13286.481561536075, 13339.072913970671), (7487.6605006617965, 7540.251853096391), (2992.5875356030087, 3045.178888037604), (19.565923536996323, 72.15727597159123)]
+2022-04-21 18:07:19,167 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:07:19,168 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (4, 4), (4, 18)]
+2022-04-21 18:07:20,318 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:07:20,318 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:07:20,318 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:07:20,318 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:07:20,318 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:07:20,319 INFO     [noisy_topk.py:25] true_topk_scores: [28466.274791968295, 13325.635151142895, 7488.270064639729, 3006.623634449173, 52.77297854604484]
+2022-04-21 18:07:20,319 INFO     [noisy_topk.py:26] gumbel_topk_scores: [28466.20049312878, 13344.303731207061, 7490.179384115112, 3019.8901031570163, 71.07047544082405]
+2022-04-21 18:07:20,319 DEBUG    [meta_explanation_session.py:244] [`saving-account` == "... <  100 DM", `saving-account` == "... >= 1000 DM", `saving-account` == "500 <= ... < 1000 DM", `saving-account` == "100 <= ... <  500 DM", `age` == "(70, 80]"]
+2022-04-21 18:07:20,319 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:07:23,115 DEBUG    [meta_explanation_session.py:261] [(28449.891372876846, 28502.48272531144), (13302.59601883587, 13355.187371270466), (7433.37272540299, 7485.964077837584), (3009.458179025542, 3062.049531460137), (40.83189661528738, 93.42324904988229)]
+2022-04-21 18:07:23,115 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:07:23,116 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (4, 4), (4, 15)]
+2022-04-21 18:07:24,297 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:07:24,297 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:07:24,297 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:07:24,297 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:07:24,297 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:07:24,298 INFO     [noisy_topk.py:25] true_topk_scores: [28466.274791968295, 13325.635151142895, 7488.270064639729, 3006.623634449173, 52.77297854604484]
+2022-04-21 18:07:24,298 INFO     [noisy_topk.py:26] gumbel_topk_scores: [28480.702120302525, 13326.47591384281, 7480.5791446356225, 3011.8371517473247, 44.13428260312228]
+2022-04-21 18:07:24,298 DEBUG    [meta_explanation_session.py:244] [`saving-account` == "... <  100 DM", `saving-account` == "... >= 1000 DM", `saving-account` == "500 <= ... < 1000 DM", `saving-account` == "100 <= ... <  500 DM", `age` == "(70, 80]"]
+2022-04-21 18:07:24,298 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:07:27,121 DEBUG    [meta_explanation_session.py:261] [(28439.362984756426, 28491.954337191022), (13298.168430517206, 13350.759782951802), (7452.139306196524, 7504.730658631118), (2986.9845694374667, 3039.575921872062), (9.92545365946048, 62.51680609405539)]
+2022-04-21 18:07:27,122 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:07:27,122 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (4, 4), (4, 17)]
+2022-04-21 18:07:28,300 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:07:28,301 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:07:28,301 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:07:28,301 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:07:28,301 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:07:28,301 INFO     [noisy_topk.py:25] true_topk_scores: [28466.274791968295, 13325.635151142895, 7488.270064639729, 3006.623634449173, 52.77297854604484]
+2022-04-21 18:07:28,301 INFO     [noisy_topk.py:26] gumbel_topk_scores: [28473.785776025506, 13318.04618067004, 7484.258072991634, 3035.591009534713, 60.21488342606372]
+2022-04-21 18:07:28,301 DEBUG    [meta_explanation_session.py:244] [`saving-account` == "... <  100 DM", `saving-account` == "... >= 1000 DM", `saving-account` == "500 <= ... < 1000 DM", `saving-account` == "100 <= ... <  500 DM", `age` == "(70, 80]"]
+2022-04-21 18:07:28,301 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:07:31,174 DEBUG    [meta_explanation_session.py:261] [(28440.82185921354, 28493.413211648138), (13315.741820314808, 13368.333172749404), (7454.402884329693, 7506.994236764287), (2982.2428705911725, 3034.8342230257676), (40.61909705571051, 93.21044949030542)]
+2022-04-21 18:07:31,174 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:07:31,175 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (4, 4), (4, 17)]
+2022-04-21 18:07:32,352 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:07:32,352 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:07:32,352 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:07:32,352 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:07:32,352 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:07:32,353 INFO     [noisy_topk.py:25] true_topk_scores: [28466.274791968295, 13325.635151142895, 7488.270064639729, 3006.623634449173, 52.77297854604484]
+2022-04-21 18:07:32,353 INFO     [noisy_topk.py:26] gumbel_topk_scores: [28469.506235989837, 13319.792833888405, 7496.364988055207, 3028.612248997772, 71.15879767726236]
+2022-04-21 18:07:32,353 DEBUG    [meta_explanation_session.py:244] [`saving-account` == "... <  100 DM", `saving-account` == "... >= 1000 DM", `saving-account` == "500 <= ... < 1000 DM", `saving-account` == "100 <= ... <  500 DM", `age` == "(70, 80]"]
+2022-04-21 18:07:32,353 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:07:35,167 DEBUG    [meta_explanation_session.py:261] [(28408.46973263803, 28461.061085072626), (13299.344758387246, 13351.936110821842), (7462.951087720321, 7515.542440154915), (2978.005103067719, 3030.5964555023143), (29.417936870975637, 82.00928930557055)]
+2022-04-21 18:07:35,167 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:07:35,168 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (4, 4), (4, 17)]
+2022-04-21 18:07:36,345 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:07:36,345 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:07:36,345 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:07:36,345 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:07:36,345 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:07:36,345 INFO     [noisy_topk.py:25] true_topk_scores: [28466.274791968295, 13325.635151142895, 7488.270064639729, 3006.623634449173, 52.77297854604484]
+2022-04-21 18:07:36,345 INFO     [noisy_topk.py:26] gumbel_topk_scores: [28481.018765417015, 13318.794397122712, 7490.64633862304, 3019.3340843274523, 49.81772461099741]
+2022-04-21 18:07:36,345 DEBUG    [meta_explanation_session.py:244] [`saving-account` == "... <  100 DM", `saving-account` == "... >= 1000 DM", `saving-account` == "500 <= ... < 1000 DM", `saving-account` == "100 <= ... <  500 DM", `age` == "(70, 80]"]
+2022-04-21 18:07:36,345 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:07:39,193 DEBUG    [meta_explanation_session.py:261] [(28446.319392616417, 28498.910745051013), (13280.36111125866, 13332.952463693257), (7484.125002670885, 7536.716355105479), (2963.215438228756, 3015.806790663351), (15.049053703712026, 67.64040613830693)]
+2022-04-21 18:07:39,193 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:07:39,194 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (4, 4), (4, 20)]
+2022-04-21 18:07:40,474 INFO     [meta_explanation_session.py:25] 82 predicates for the explanation.
+2022-04-21 18:07:40,474 INFO     [run.py:53] loaded dataset with 1000000 rows and columns ['status', 'credit-history', 'purpose', 'saving-account', 'employment', 'installment-rate', 'sex-marst', 'other-debtors', 'residence', 'property', 'other-installment-plans', 'housing', 'existing-credits', 'job', 'people-liable', 'telephone', 'foreign-worker', 'good-credit', 'duration', 'credit-amount', 'age'].
+(`status` == "no checking account")or(`status` == "... < 0 DM")
+2022-04-21 18:07:41,225 INFO     [influence_function.py:24] Dataset relative to the question has length 542650
+2022-04-21 18:08:23,457 DEBUG    [meta_explanation_session.py:169] 82 predicates and their influences & scores have been loaded.
+2022-04-21 18:08:23,465 DEBUG    [meta_explanation_session.py:173] 
+          influence         score
+count     82.000000     82.000000
+mean    1448.228217   1448.228217
+std     3614.608343   3614.608343
+min    -8888.046352  -8888.046352
+25%        9.528454      9.528454
+50%      999.436572    999.436572
+75%     3058.151155   3058.151155
+max    17649.836836  17649.836836
+2022-04-21 18:08:23,465 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:08:23,465 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:08:23,465 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:08:23,465 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:08:23,465 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:08:23,466 INFO     [noisy_topk.py:25] true_topk_scores: [17649.83683587066, 13007.188654411442, 6030.258763655508, 6009.941264862019, 5835.46261644657]
+2022-04-21 18:08:23,466 INFO     [noisy_topk.py:26] gumbel_topk_scores: [17656.83559062058, 13004.961300005101, 6024.571370522653, 5998.852337498746, 5829.519469930404]
+2022-04-21 18:08:23,466 DEBUG    [meta_explanation_session.py:244] [`saving-account` == "... <  100 DM", `saving-account` == "... >= 1000 DM", `existing-credits` == "1", `credit-amount` == "(5000, 10000]", `property` == "building soc. savings agr./life insurance"]
+2022-04-21 18:08:23,466 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:08:25,953 DEBUG    [meta_explanation_session.py:261] [(17626.566327664976, 17679.15768009957), (12983.813895655123, 13036.405248089719), (6018.660232528453, 6071.251584963047), (5982.791013745781, 6035.382366180375), (5789.295212139413, 5841.886564574007)]
+2022-04-21 18:08:25,953 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:08:25,956 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 5), (2, 7)]
+2022-04-21 18:08:27,91 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:08:27,91 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:08:27,91 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:08:27,91 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:08:27,91 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:08:27,92 INFO     [noisy_topk.py:25] true_topk_scores: [17649.83683587066, 13007.188654411442, 6030.258763655508, 6009.941264862019, 5835.46261644657]
+2022-04-21 18:08:27,92 INFO     [noisy_topk.py:26] gumbel_topk_scores: [17650.11741005457, 13017.878334129493, 6032.467567532925, 6071.425210689277, 5845.823137279024]
+2022-04-21 18:08:27,92 DEBUG    [meta_explanation_session.py:244] [`saving-account` == "... <  100 DM", `saving-account` == "... >= 1000 DM", `credit-amount` == "(5000, 10000]", `existing-credits` == "1", `credit-amount` == "(500, 2500]"]
+2022-04-21 18:08:27,92 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:08:29,629 DEBUG    [meta_explanation_session.py:261] [(17632.91083819183, 17685.502190626426), (12978.603502324777, 13031.194854759373), (6000.038275759579, 6052.629628194173), (6003.264996310368, 6055.856348744962), (5815.503270166621, 5868.094622601216)]
+2022-04-21 18:08:29,629 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:08:29,630 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 4), (2, 7)]
+2022-04-21 18:08:30,827 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:08:30,827 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:08:30,827 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:08:30,827 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:08:30,827 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:08:30,827 INFO     [noisy_topk.py:25] true_topk_scores: [17649.83683587066, 13007.188654411442, 6030.258763655508, 6009.941264862019, 5835.46261644657]
+2022-04-21 18:08:30,827 INFO     [noisy_topk.py:26] gumbel_topk_scores: [17653.811485177517, 13009.166635261476, 6036.240833698753, 6031.366820509791, 5833.378838076055]
+2022-04-21 18:08:30,828 DEBUG    [meta_explanation_session.py:244] [`saving-account` == "... <  100 DM", `saving-account` == "... >= 1000 DM", `existing-credits` == "1", `credit-amount` == "(5000, 10000]", `credit-amount` == "(500, 2500]"]
+2022-04-21 18:08:30,828 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:08:33,394 DEBUG    [meta_explanation_session.py:261] [(17612.015308846447, 17664.606661281043), (12957.755066282347, 13010.346418716943), (5998.405824328895, 6050.997176763489), (5983.5669486464, 6036.1583010809945), (5830.562525284335, 5883.153877718929)]
+2022-04-21 18:08:33,395 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:08:33,395 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 4), (2, 7)]
+2022-04-21 18:08:34,632 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:08:34,632 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:08:34,632 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:08:34,632 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:08:34,632 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:08:34,632 INFO     [noisy_topk.py:25] true_topk_scores: [17649.83683587066, 13007.188654411442, 6030.258763655508, 6009.941264862019, 5835.46261644657]
+2022-04-21 18:08:34,632 INFO     [noisy_topk.py:26] gumbel_topk_scores: [17658.177550394506, 13016.321387210764, 6036.3776857924, 6019.57910131439, 5834.560467473816]
+2022-04-21 18:08:34,632 DEBUG    [meta_explanation_session.py:244] [`saving-account` == "... <  100 DM", `saving-account` == "... >= 1000 DM", `existing-credits` == "1", `credit-amount` == "(5000, 10000]", `credit-amount` == "(500, 2500]"]
+2022-04-21 18:08:34,633 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:08:37,207 DEBUG    [meta_explanation_session.py:261] [(17653.821845546634, 17706.41319798123), (12985.835604693259, 13038.426957127855), (6011.20749263624, 6063.798845070834), (5966.270260460907, 6018.861612895501), (5811.676496840709, 5864.267849275303)]
+2022-04-21 18:08:37,207 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:08:37,208 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 4), (2, 7)]
+2022-04-21 18:08:38,419 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:08:38,419 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:08:38,419 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:08:38,419 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:08:38,419 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:08:38,420 INFO     [noisy_topk.py:25] true_topk_scores: [17649.83683587066, 13007.188654411442, 6030.258763655508, 6009.941264862019, 5835.46261644657]
+2022-04-21 18:08:38,420 INFO     [noisy_topk.py:26] gumbel_topk_scores: [17646.3479137114, 13021.4486079288, 6028.236737091616, 6007.301206589472, 5839.691697953953]
+2022-04-21 18:08:38,420 DEBUG    [meta_explanation_session.py:244] [`saving-account` == "... <  100 DM", `saving-account` == "... >= 1000 DM", `existing-credits` == "1", `credit-amount` == "(5000, 10000]", `credit-amount` == "(500, 2500]"]
+2022-04-21 18:08:38,420 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:08:41,36 DEBUG    [meta_explanation_session.py:261] [(17622.39727159128, 17674.988624025875), (12977.455632983001, 13030.046985417597), (6014.805456328082, 6067.396808762676), (5983.962458445309, 6036.553810879903), (5812.3427666112, 5864.934119045794)]
+2022-04-21 18:08:41,36 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:08:41,37 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 4), (2, 7)]
+2022-04-21 18:08:42,279 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:08:42,279 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:08:42,279 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:08:42,279 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:08:42,279 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:08:42,280 INFO     [noisy_topk.py:25] true_topk_scores: [17649.83683587066, 13007.188654411442, 6030.258763655508, 6009.941264862019, 5835.46261644657]
+2022-04-21 18:08:42,280 INFO     [noisy_topk.py:26] gumbel_topk_scores: [17654.50854843296, 13015.612251557575, 6049.635717799152, 6007.506525257052, 5830.85097000316]
+2022-04-21 18:08:42,280 DEBUG    [meta_explanation_session.py:244] [`saving-account` == "... <  100 DM", `saving-account` == "... >= 1000 DM", `existing-credits` == "1", `credit-amount` == "(5000, 10000]", `credit-amount` == "(500, 2500]"]
+2022-04-21 18:08:42,280 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:08:44,744 DEBUG    [meta_explanation_session.py:261] [(17611.199224234373, 17663.79057666897), (12960.84153951284, 13013.432891947436), (6015.87338268456, 6068.464735119154), (5967.301032622575, 6019.892385057169), (5830.600304672518, 5883.191657107112)]
+2022-04-21 18:08:44,745 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:08:44,745 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 4), (2, 7)]
+2022-04-21 18:08:45,868 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:08:45,868 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:08:45,868 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:08:45,868 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:08:45,868 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:08:45,869 INFO     [noisy_topk.py:25] true_topk_scores: [17649.83683587066, 13007.188654411442, 6030.258763655508, 6009.941264862019, 5835.46261644657]
+2022-04-21 18:08:45,869 INFO     [noisy_topk.py:26] gumbel_topk_scores: [17661.07720930646, 13031.316467058894, 6043.988002152258, 6008.447437877923, 5844.077911225526]
+2022-04-21 18:08:45,869 DEBUG    [meta_explanation_session.py:244] [`saving-account` == "... <  100 DM", `saving-account` == "... >= 1000 DM", `existing-credits` == "1", `credit-amount` == "(5000, 10000]", `credit-amount` == "(500, 2500]"]
+2022-04-21 18:08:45,869 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:08:48,305 DEBUG    [meta_explanation_session.py:261] [(17605.585399766012, 17658.17675220061), (12980.90462729253, 13033.495979727126), (5991.456378704098, 6044.047731138692), (5990.3717535152155, 6042.96310594981), (5812.668670102345, 5865.260022536939)]
+2022-04-21 18:08:48,305 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:08:48,308 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 4), (2, 7)]
+2022-04-21 18:08:49,469 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:08:49,469 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:08:49,469 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:08:49,469 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:08:49,469 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:08:49,469 INFO     [noisy_topk.py:25] true_topk_scores: [17649.83683587066, 13007.188654411442, 6030.258763655508, 6009.941264862019, 5835.46261644657]
+2022-04-21 18:08:49,469 INFO     [noisy_topk.py:26] gumbel_topk_scores: [17647.55450584698, 13021.062404947557, 6057.149551014866, 6011.783406807642, 5833.052229508271]
+2022-04-21 18:08:49,469 DEBUG    [meta_explanation_session.py:244] [`saving-account` == "... <  100 DM", `saving-account` == "... >= 1000 DM", `existing-credits` == "1", `credit-amount` == "(5000, 10000]", `credit-amount` == "(500, 2500]"]
+2022-04-21 18:08:49,469 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:08:51,918 DEBUG    [meta_explanation_session.py:261] [(17639.140599016755, 17691.73195145135), (12982.692902830955, 13035.284255265551), (5991.492630944283, 6044.083983378877), (5945.381670734801, 5997.973023169396), (5817.908654238571, 5870.500006673165)]
+2022-04-21 18:08:51,918 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:08:51,919 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 4), (2, 7)]
+2022-04-21 18:08:53,51 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:08:53,51 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:08:53,51 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:08:53,51 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:08:53,51 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:08:53,51 INFO     [noisy_topk.py:25] true_topk_scores: [17649.83683587066, 13007.188654411442, 6030.258763655508, 6009.941264862019, 5835.46261644657]
+2022-04-21 18:08:53,51 INFO     [noisy_topk.py:26] gumbel_topk_scores: [17644.830848489095, 13013.630625406051, 6050.0614648181245, 6007.797111581321, 5828.623954172707]
+2022-04-21 18:08:53,51 DEBUG    [meta_explanation_session.py:244] [`saving-account` == "... <  100 DM", `saving-account` == "... >= 1000 DM", `existing-credits` == "1", `credit-amount` == "(5000, 10000]", `credit-amount` == "(500, 2500]"]
+2022-04-21 18:08:53,51 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:08:55,503 DEBUG    [meta_explanation_session.py:261] [(17630.54634563131, 17683.137698065904), (12982.864289812069, 13035.455642246665), (5983.9897867334685, 6036.581139168063), (5988.185263683845, 6040.776616118439), (5834.666240684929, 5887.257593119523)]
+2022-04-21 18:08:55,503 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:08:55,504 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 4), (2, 7)]
+2022-04-21 18:08:56,661 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:08:56,661 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:08:56,661 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:08:56,661 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:08:56,661 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:08:56,662 INFO     [noisy_topk.py:25] true_topk_scores: [17649.83683587066, 13007.188654411442, 6030.258763655508, 6009.941264862019, 5835.46261644657]
+2022-04-21 18:08:56,662 INFO     [noisy_topk.py:26] gumbel_topk_scores: [17661.177883143642, 13042.033142268148, 6031.705220168863, 6010.7675792599075, 5839.243722507347]
+2022-04-21 18:08:56,662 DEBUG    [meta_explanation_session.py:244] [`saving-account` == "... <  100 DM", `saving-account` == "... >= 1000 DM", `existing-credits` == "1", `credit-amount` == "(5000, 10000]", `credit-amount` == "(500, 2500]"]
+2022-04-21 18:08:56,662 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:08:59,131 DEBUG    [meta_explanation_session.py:261] [(17638.090123911297, 17690.681476345893), (12968.728316736713, 13021.31966917131), (5996.473525297587, 6049.064877732181), (5973.525757667602, 6026.117110102196), (5807.539729180907, 5860.131081615501)]
+2022-04-21 18:08:59,131 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:08:59,134 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 4), (2, 7)]
+2022-04-21 18:09:00,407 INFO     [meta_explanation_session.py:25] 82 predicates for the explanation.
+2022-04-21 18:09:00,407 INFO     [run.py:53] loaded dataset with 1000000 rows and columns ['status', 'credit-history', 'purpose', 'saving-account', 'employment', 'installment-rate', 'sex-marst', 'other-debtors', 'residence', 'property', 'other-installment-plans', 'housing', 'existing-credits', 'job', 'people-liable', 'telephone', 'foreign-worker', 'good-credit', 'duration', 'credit-amount', 'age'].
+(`status` == "no checking account")or(`status` == "... < 0 DM")
+2022-04-21 18:09:01,67 INFO     [influence_function.py:24] Dataset relative to the question has length 542650
+2022-04-21 18:09:42,893 DEBUG    [meta_explanation_session.py:169] 82 predicates and their influences & scores have been loaded.
+2022-04-21 18:09:42,901 DEBUG    [meta_explanation_session.py:173] 
+       influence         score
+count  82.000000     82.000000
+mean    0.000333     91.117826
+std     0.014304   3912.349348
+min    -0.057912 -15839.828271
+25%    -0.004585  -1253.962692
+50%     0.000003      0.761900
+75%     0.005414   1480.750210
+max     0.036828  10073.068379
+2022-04-21 18:09:42,901 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:09:42,901 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:09:42,901 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:09:42,901 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:09:42,902 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:09:42,902 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:09:42,902 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10133.784962647327, 9230.133369424802, 7085.431267752179, 6558.760776527497, 6299.917318029306]
+2022-04-21 18:09:42,902 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:09:42,902 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:09:46,736 DEBUG    [meta_explanation_session.py:261] [(0.036474517895859496, 0.03711166229317001), (0.033473465921834096, 0.03411277044500437), (0.025675077867696943, 0.026324131185251766), (0.023382223375740127, 0.02405923703524932), (0.022801298170649586, 0.023472214757209956)]
+2022-04-21 18:09:46,736 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:09:46,737 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 5), (2, 5)]
+2022-04-21 18:09:47,976 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:09:47,976 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:09:47,976 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:09:47,976 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:09:47,976 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:09:47,977 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:09:47,977 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10100.05245512286, 9331.177251469808, 7126.162661182742, 6633.495756686154, 6404.63428846509]
+2022-04-21 18:09:47,977 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:09:47,977 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:09:51,929 DEBUG    [meta_explanation_session.py:261] [(0.036513300000659506, 0.03715049520596838), (0.03347718781557273, 0.03411647982666893), (0.025651919785533155, 0.026300981156066716), (0.023358395322139118, 0.02403546619575244), (0.022802645734119675, 0.023473619706265037)]
+2022-04-21 18:09:51,929 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:09:51,930 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 5), (2, 5)]
+2022-04-21 18:09:53,155 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:09:53,155 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:09:53,155 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:09:53,155 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:09:53,155 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:09:53,156 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:09:53,156 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10066.744781655134, 9253.85650120151, 7160.0595207567685, 6568.128689764749, 6316.220664821273]
+2022-04-21 18:09:53,156 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:09:53,156 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:09:57,24 DEBUG    [meta_explanation_session.py:261] [(0.036470987305603386, 0.03710819545031401), (0.03346333325615817, 0.0341026473580936), (0.025584735970269928, 0.026233840576371053), (0.023384504629566857, 0.02406146416903447), (0.022840010261679953, 0.02351094284281681)]
+2022-04-21 18:09:57,24 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:09:57,25 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 5), (2, 5)]
+2022-04-21 18:09:58,280 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:09:58,280 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:09:58,280 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:09:58,280 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:09:58,280 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:09:58,281 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:09:58,281 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10033.66074396573, 9254.529330257083, 7046.000681206284, 6521.288531784672, 6340.051876903799]
+2022-04-21 18:09:58,281 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:09:58,281 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:10:02,250 DEBUG    [meta_explanation_session.py:261] [(0.03650524690756863, 0.03714252524259172), (0.03350263315972529, 0.03414194674197652), (0.025599668002752773, 0.02624872664988499), (0.02330755385580048, 0.023984508582959266), (0.02285222450000428, 0.02352322147276431)]
+2022-04-21 18:10:02,250 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:10:02,251 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 5), (4, 5)]
+2022-04-21 18:10:03,482 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:10:03,482 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:10:03,482 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:10:03,482 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:10:03,482 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:10:03,482 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:10:03,482 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10093.25193066502, 9238.994149023083, 7080.497713406905, 6499.275399883449, 6403.205112405449]
+2022-04-21 18:10:03,482 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:10:03,483 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:10:07,368 DEBUG    [meta_explanation_session.py:261] [(0.03649232923176443, 0.037129504588482264), (0.033501108469660125, 0.03414043774162721), (0.0257011727230504, 0.02635025303547586), (0.02340916047197363, 0.024086302444248132), (0.02280989275374137, 0.023480779506952393)]
+2022-04-21 18:10:07,368 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:10:07,369 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 5), (2, 5)]
+2022-04-21 18:10:08,612 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:10:08,612 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:10:08,613 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:10:08,613 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:10:08,613 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:10:08,613 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:10:08,613 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10051.551864378604, 9260.77257987463, 7072.554968679519, 6459.6626790343325, 6373.487891264018]
+2022-04-21 18:10:08,613 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:10:08,613 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:10:12,513 DEBUG    [meta_explanation_session.py:261] [(0.036556373026910505, 0.037193602586591684), (0.03357387052940482, 0.03421321062391935), (0.025565833443198308, 0.026214927472172925), (0.023305159457126738, 0.02398219561577866), (0.0227858098608135, 0.023456681344795484)]
+2022-04-21 18:10:12,513 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:10:12,514 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 5), (2, 5)]
+2022-04-21 18:10:13,754 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:10:13,754 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:10:13,754 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:10:13,754 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:10:13,754 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:10:13,754 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:10:13,754 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10125.203122568404, 9308.340236294194, 7145.500952906643, 6458.312506057094, 6335.0186344175745]
+2022-04-21 18:10:13,754 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:10:13,754 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:10:17,659 DEBUG    [meta_explanation_session.py:261] [(0.03654015585041087, 0.037177382608382534), (0.033503411131026624, 0.03414277073627237), (0.025650715851915803, 0.02629969808407604), (0.0232854871087164, 0.023962534989472838), (0.022811574461022457, 0.023482549362666815)]
+2022-04-21 18:10:17,659 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:10:17,660 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 5), (2, 5)]
+2022-04-21 18:10:18,887 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:10:18,887 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:10:18,887 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:10:18,887 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:10:18,887 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:10:18,888 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:10:18,888 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10043.503731823052, 9289.579716352757, 7093.27847472588, 6507.747516439092, 6361.462410469761]
+2022-04-21 18:10:18,888 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:10:18,888 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:10:22,654 DEBUG    [meta_explanation_session.py:261] [(0.03659821500431477, 0.03723550876202273), (0.033567791074183145, 0.03420717745481669), (0.025651227886640048, 0.026300312779506976), (0.0233154963298233, 0.023992466096247098), (0.02282648758365379, 0.023497381122038356)]
+2022-04-21 18:10:22,654 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:10:22,655 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 5), (2, 5)]
+2022-04-21 18:10:23,820 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:10:23,820 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:10:23,821 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:10:23,821 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:10:23,821 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:10:23,821 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:10:23,821 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10126.262707130541, 9220.226589141806, 7086.490370985395, 6496.396165432674, 6343.76025210447]
+2022-04-21 18:10:23,821 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:10:23,821 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:10:27,593 DEBUG    [meta_explanation_session.py:261] [(0.03650490668845652, 0.03714210513376553), (0.03354698154206753, 0.03418637758145293), (0.025598372104527256, 0.026247398471685075), (0.023286391261070207, 0.023963419908519766), (0.022834913185329344, 0.023505957856458898)]
+2022-04-21 18:10:27,593 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:10:27,594 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 5), (2, 5)]
+2022-04-21 18:10:28,786 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:10:28,787 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:10:28,787 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:10:28,787 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:10:28,787 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:10:28,787 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:10:28,787 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10073.614235600526, 9204.712865794905, 7152.18866434022, 6494.230983431436, 6362.808212718513]
+2022-04-21 18:10:28,788 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:10:28,788 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:10:32,482 DEBUG    [meta_explanation_session.py:261] [(0.0364635309921589, 0.03710073585584673), (0.03349057539793425, 0.03412983006179431), (0.025623608269951328, 0.02627264656469326), (0.023342606799081653, 0.024019673129940338), (0.022801530481310932, 0.023472427235311906)]
+2022-04-21 18:10:32,482 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:10:32,483 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 5), (2, 5)]
+2022-04-21 18:10:33,780 INFO     [meta_explanation_session.py:25] 82 predicates for the explanation.
+2022-04-21 18:10:33,780 INFO     [run.py:53] loaded dataset with 1000000 rows and columns ['status', 'credit-history', 'purpose', 'saving-account', 'employment', 'installment-rate', 'sex-marst', 'other-debtors', 'residence', 'property', 'other-installment-plans', 'housing', 'existing-credits', 'job', 'people-liable', 'telephone', 'foreign-worker', 'good-credit', 'duration', 'credit-amount', 'age'].
+(`status` == "no checking account")or(`status` == "... < 0 DM")
+2022-04-21 18:10:34,457 INFO     [influence_function.py:24] Dataset relative to the question has length 542650
+2022-04-21 18:11:16,127 DEBUG    [meta_explanation_session.py:169] 82 predicates and their influences & scores have been loaded.
+2022-04-21 18:11:16,135 DEBUG    [meta_explanation_session.py:173] 
+       influence         score
+count  82.000000     82.000000
+mean    0.000333     91.117826
+std     0.014304   3912.349348
+min    -0.057912 -15839.828271
+25%    -0.004585  -1253.962692
+50%     0.000003      0.761900
+75%     0.005414   1480.750210
+max     0.036828  10073.068379
+2022-04-21 18:11:16,135 DEBUG    [meta_explanation_session.py:228] total rho_expl is 1.501
+2022-04-21 18:11:16,135 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.001
+2022-04-21 18:11:16,135 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:11:16,135 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:11:16,135 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:11:16,135 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:11:16,135 INFO     [noisy_topk.py:26] gumbel_topk_scores: [9861.538243206638, 9502.724946178272, 7549.132064885475, 5806.800758408561, 6785.5632533873895]
+2022-04-21 18:11:16,135 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-history` == "no credits taken/all credits paid back duly", `credit-amount` == "(500, 2500]"]
+2022-04-21 18:11:16,136 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:11:19,861 DEBUG    [meta_explanation_session.py:261] [(0.036537923938243386, 0.03717512564234153), (0.03353843073796718, 0.034177837665609175), (0.025614263222896238, 0.026263251248407962), (0.02276873546436287, 0.023439595674861334), (0.023360557223129595, 0.024037586549130425)]
+2022-04-21 18:11:19,862 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:11:19,862 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 5), (2, 5)]
+2022-04-21 18:11:21,21 DEBUG    [meta_explanation_session.py:228] total rho_expl is 1.501
+2022-04-21 18:11:21,21 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.001
+2022-04-21 18:11:21,21 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:11:21,21 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:11:21,21 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:11:21,21 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:11:21,21 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10142.846366840764, 9524.95090181536, 7088.662802163269, 5879.952591776708, 6731.275660224896]
+2022-04-21 18:11:21,21 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `property` == "building soc. savings agr./life insurance", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:11:21,21 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:11:24,795 DEBUG    [meta_explanation_session.py:261] [(0.03649406323935741, 0.03713127291899812), (0.0335464560066525, 0.0341858075897802), (0.025633335502357937, 0.02628235881978555), (0.019928108078754888, 0.020683718675416234), (0.022765342277377906, 0.023436241863563096)]
+2022-04-21 18:11:24,795 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:11:24,796 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (4, 8), (2, 5)]
+2022-04-21 18:11:25,999 DEBUG    [meta_explanation_session.py:228] total rho_expl is 1.501
+2022-04-21 18:11:25,999 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.001
+2022-04-21 18:11:25,999 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:11:25,999 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:11:25,999 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:11:26,0 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:11:26,0 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10758.250264211047, 9222.496376470897, 7088.97076095301, 6283.384671581605, 5930.983761026019]
+2022-04-21 18:11:26,0 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(5000, 10000]", `property` == "building soc. savings agr./life insurance"]
+2022-04-21 18:11:26,0 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:11:29,921 DEBUG    [meta_explanation_session.py:261] [(0.03654903036488835, 0.037186211525247904), (0.03351918074613742, 0.03415851166918168), (0.02566425238568824, 0.026313342888828768), (0.02025695925636024, 0.021090400138880822), (0.019981034119122578, 0.020736599260627965)]
+2022-04-21 18:11:29,922 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:11:29,922 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (4, 8), (4, 8)]
+2022-04-21 18:11:31,105 DEBUG    [meta_explanation_session.py:228] total rho_expl is 1.501
+2022-04-21 18:11:31,105 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.001
+2022-04-21 18:11:31,105 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:11:31,105 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:11:31,105 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:11:31,106 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:11:31,106 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10365.277913686286, 8983.513267947688, 6416.482183022046, 6644.662669867227, 6716.441266316187]
+2022-04-21 18:11:31,106 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `saving-account` == "... >= 1000 DM", `credit-history` == "no credits taken/all credits paid back duly", `credit-amount` == "(500, 2500]"]
+2022-04-21 18:11:31,106 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:11:34,999 DEBUG    [meta_explanation_session.py:261] [(0.03650656319793173, 0.037143844929137526), (0.033573028071288494, 0.03421240891823226), (0.019771650752700716, 0.02057248925664861), (0.022724295881506165, 0.023395209674376492), (0.023296314855823518, 0.023973332790432865)]
+2022-04-21 18:11:34,999 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:11:35,0 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 10), (2, 5), (4, 5)]
+2022-04-21 18:11:36,175 DEBUG    [meta_explanation_session.py:228] total rho_expl is 1.501
+2022-04-21 18:11:36,175 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.001
+2022-04-21 18:11:36,175 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:11:36,175 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:11:36,175 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:11:36,175 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:11:36,175 INFO     [noisy_topk.py:26] gumbel_topk_scores: [9762.692599554306, 8672.965220337068, 9543.537481296498, 6744.265458512354, 6614.076077756116]
+2022-04-21 18:11:36,175 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `sex-marst` == "male : married/widowed", `job` == "skilled employee / official", `residence` == ">= 7 yrs", `property` == "building soc. savings agr./life insurance"]
+2022-04-21 18:11:36,175 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:11:40,28 DEBUG    [meta_explanation_session.py:261] [(0.03644162952199609, 0.03707886158742481), (0.025687048631276115, 0.02633613468141771), (0.03353208401305239, 0.03417150314232212), (0.013822935924053982, 0.014537009559783676), (0.019958907394277563, 0.02071451281762183)]
+2022-04-21 18:11:40,28 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:11:40,29 DEBUG    [meta_explanation_session.py:280] [(1, 1), (2, 4), (1, 2), (9, 12), (2, 8)]
+2022-04-21 18:11:41,210 DEBUG    [meta_explanation_session.py:228] total rho_expl is 1.501
+2022-04-21 18:11:41,210 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.001
+2022-04-21 18:11:41,210 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:11:41,210 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:11:41,210 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:11:41,210 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:11:41,210 INFO     [noisy_topk.py:26] gumbel_topk_scores: [11043.795368473417, 10161.720693390456, 8014.228661584868, 8333.175852724733, 10564.578168840591]
+2022-04-21 18:11:41,210 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `credit-history` == "no credits taken/all credits paid back duly", `job` == "skilled employee / official", `credit-amount` == "(500, 2500]", `sex-marst` == "male : married/widowed"]
+2022-04-21 18:11:41,210 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:11:44,992 DEBUG    [meta_explanation_session.py:261] [(0.03654891635640428, 0.03718612435230957), (0.022763300706639133, 0.02343431808925757), (0.0334879875309237, 0.0341273029919639), (0.023379237278903797, 0.02405635163884436), (0.025589038550408224, 0.02623810956636059)]
+2022-04-21 18:11:44,993 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:11:44,996 DEBUG    [meta_explanation_session.py:280] [(1, 1), (2, 5), (1, 2), (2, 5), (2, 4)]
+2022-04-21 18:11:46,219 DEBUG    [meta_explanation_session.py:228] total rho_expl is 1.501
+2022-04-21 18:11:46,219 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.001
+2022-04-21 18:11:46,219 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:11:46,220 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:11:46,220 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:11:46,220 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:11:46,220 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10875.512307730165, 9841.503155417695, 7752.1383351243285, 7356.807888978874, 8585.469347686374]
+2022-04-21 18:11:46,220 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `credit-history` == "no credits taken/all credits paid back duly", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]"]
+2022-04-21 18:11:46,220 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:11:49,996 DEBUG    [meta_explanation_session.py:261] [(0.036553892307408534, 0.03719119689873959), (0.03348180196856358, 0.034121123540000686), (0.02280107619911589, 0.023472038821096868), (0.025587746659099995, 0.026236827661949957), (0.023349108367183256, 0.0240262159496627)]
+2022-04-21 18:11:49,996 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:11:50,0 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 7), (2, 4), (2, 5)]
+2022-04-21 18:11:51,188 DEBUG    [meta_explanation_session.py:228] total rho_expl is 1.501
+2022-04-21 18:11:51,188 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.001
+2022-04-21 18:11:51,188 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:11:51,188 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:11:51,188 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:11:51,188 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:11:51,188 INFO     [noisy_topk.py:26] gumbel_topk_scores: [9749.417352668754, 9524.761564544497, 7920.661948819395, 8017.059277159755, 6217.802457796739]
+2022-04-21 18:11:51,188 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `credit-amount` == "(500, 2500]", `sex-marst` == "male : married/widowed", `credit-amount` == "(5000, 10000]"]
+2022-04-21 18:11:51,188 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:11:55,166 DEBUG    [meta_explanation_session.py:261] [(0.03647283047474138, 0.03711009202998921), (0.0335068168851749, 0.03414616623889138), (0.02333925323669979, 0.024016310193434684), (0.025663639888222803, 0.026312648504470387), (0.02023590525864842, 0.021069344327598296)]
+2022-04-21 18:11:55,166 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:11:55,168 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 5), (2, 4), (2, 8)]
+2022-04-21 18:11:56,418 DEBUG    [meta_explanation_session.py:228] total rho_expl is 1.501
+2022-04-21 18:11:56,418 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.001
+2022-04-21 18:11:56,418 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:11:56,418 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:11:56,418 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:11:56,418 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:11:56,418 INFO     [noisy_topk.py:26] gumbel_topk_scores: [9691.718183636869, 10958.597209214846, 6652.235064230258, 7740.354484897654, 7736.059846933846]
+2022-04-21 18:11:56,418 DEBUG    [meta_explanation_session.py:244] [`job` == "skilled employee / official", `existing-credits` == "1", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly", `sex-marst` == "male : married/widowed"]
+2022-04-21 18:11:56,418 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:12:00,281 DEBUG    [meta_explanation_session.py:261] [(0.033464566542586296, 0.034103895610094984), (0.03644407391463832, 0.037081267332590956), (0.02334291476242221, 0.024019935901429146), (0.022821662090777132, 0.023492615119564072), (0.025637343398994015, 0.026286497730359744)]
+2022-04-21 18:12:00,282 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:12:00,284 DEBUG    [meta_explanation_session.py:280] [(1, 2), (1, 1), (2, 5), (2, 5), (2, 4)]
+2022-04-21 18:12:01,462 DEBUG    [meta_explanation_session.py:228] total rho_expl is 1.501
+2022-04-21 18:12:01,462 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.001
+2022-04-21 18:12:01,462 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:12:01,462 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:12:01,463 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:12:01,463 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:12:01,463 INFO     [noisy_topk.py:26] gumbel_topk_scores: [9711.602472567456, 9713.569976090504, 7528.282013353765, 9289.140559133466, 5349.2225343358405]
+2022-04-21 18:12:01,463 DEBUG    [meta_explanation_session.py:244] [`job` == "skilled employee / official", `existing-credits` == "1", `credit-amount` == "(500, 2500]", `sex-marst` == "male : married/widowed", `property` == "building soc. savings agr./life insurance"]
+2022-04-21 18:12:01,463 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:12:05,338 DEBUG    [meta_explanation_session.py:261] [(0.03350137018345305, 0.034140724385338043), (0.03658193446763596, 0.03721917842882115), (0.023363408756499397, 0.024040446921636562), (0.0256924128256875, 0.02634145067562435), (0.019947809673054963, 0.02070337891713596)]
+2022-04-21 18:12:05,338 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:12:05,341 DEBUG    [meta_explanation_session.py:280] [(1, 2), (1, 1), (2, 5), (2, 4), (2, 8)]
+2022-04-21 18:12:06,678 INFO     [meta_explanation_session.py:25] 82 predicates for the explanation.
+2022-04-21 18:12:06,678 INFO     [run.py:53] loaded dataset with 1000000 rows and columns ['status', 'credit-history', 'purpose', 'saving-account', 'employment', 'installment-rate', 'sex-marst', 'other-debtors', 'residence', 'property', 'other-installment-plans', 'housing', 'existing-credits', 'job', 'people-liable', 'telephone', 'foreign-worker', 'good-credit', 'duration', 'credit-amount', 'age'].
+(`status` == "no checking account")or(`status` == "... < 0 DM")
+2022-04-21 18:12:07,375 INFO     [influence_function.py:24] Dataset relative to the question has length 542650
+2022-04-21 18:12:49,71 DEBUG    [meta_explanation_session.py:169] 82 predicates and their influences & scores have been loaded.
+2022-04-21 18:12:49,80 DEBUG    [meta_explanation_session.py:173] 
+       influence         score
+count  82.000000     82.000000
+mean    0.000333     91.117826
+std     0.014304   3912.349348
+min    -0.057912 -15839.828271
+25%    -0.004585  -1253.962692
+50%     0.000003      0.761900
+75%     0.005414   1480.750210
+max     0.036828  10073.068379
+2022-04-21 18:12:49,80 DEBUG    [meta_explanation_session.py:228] total rho_expl is 1.501
+2022-04-21 18:12:49,81 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:12:49,81 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.001
+2022-04-21 18:12:49,81 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:12:49,81 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:12:49,81 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:12:49,81 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10104.916764791124, 9356.90648446313, 7079.693368775439, 6490.275054878349, 6375.485526314934]
+2022-04-21 18:12:49,81 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:12:49,81 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:12:52,761 DEBUG    [meta_explanation_session.py:261] [(0.02816937971067268, 0.04238808245559947), (0.02675175837148277, 0.04110577473952541), (0.020599619852654818, 0.035110247626652574), (0.01772671261353331, 0.032899673352930904), (0.01513246461109647, 0.03014844153553707)]
+2022-04-21 18:12:52,761 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:12:52,762 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 5), (2, 5)]
+2022-04-21 18:12:53,917 DEBUG    [meta_explanation_session.py:228] total rho_expl is 1.501
+2022-04-21 18:12:53,917 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:12:53,917 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.001
+2022-04-21 18:12:53,917 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:12:53,917 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:12:53,917 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:12:53,917 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10048.998248917647, 9268.854251817442, 7116.871521900586, 6436.102586987185, 6331.325832906815]
+2022-04-21 18:12:53,917 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:12:53,917 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:12:57,605 DEBUG    [meta_explanation_session.py:261] [(0.029097958760331066, 0.043317573966122375), (0.02666423349369394, 0.04100335539859479), (0.018652050326710013, 0.03313764646878307), (0.016309883920277417, 0.03145272781067003), (0.015141063561931352, 0.030185780189524447)]
+2022-04-21 18:12:57,605 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:12:57,606 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 5), (2, 5)]
+2022-04-21 18:12:58,783 DEBUG    [meta_explanation_session.py:228] total rho_expl is 1.501
+2022-04-21 18:12:58,783 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:12:58,783 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.001
+2022-04-21 18:12:58,783 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:12:58,783 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:12:58,783 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:12:58,784 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10123.583598578656, 9248.79262142664, 7085.218851598395, 6617.730535411022, 6314.332401196145]
+2022-04-21 18:12:58,784 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:12:58,784 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:13:02,478 DEBUG    [meta_explanation_session.py:261] [(0.029488434491208842, 0.043728159518472955), (0.025466616759114737, 0.039781325125533264), (0.018347933666870965, 0.03287329624076901), (0.015439616736949617, 0.03059420842846941), (0.015590273110175898, 0.030612756319541166)]
+2022-04-21 18:13:02,478 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:13:02,481 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 5), (2, 5)]
+2022-04-21 18:13:03,649 DEBUG    [meta_explanation_session.py:228] total rho_expl is 1.501
+2022-04-21 18:13:03,649 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:13:03,649 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.001
+2022-04-21 18:13:03,649 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:13:03,649 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:13:03,650 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:13:03,650 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10098.188202273137, 9214.286485788734, 7089.133956303128, 6496.872235371776, 6441.484158642241]
+2022-04-21 18:13:03,650 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:13:03,650 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:13:07,334 DEBUG    [meta_explanation_session.py:261] [(0.02877861992892954, 0.04300591914094766), (0.026578952220549144, 0.040876455573309205), (0.01954732808223847, 0.03410089041738847), (0.014670190128166855, 0.029792275006316038), (0.01609905017724212, 0.03112725163306097)]
+2022-04-21 18:13:07,334 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:13:07,335 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 5), (4, 5)]
+2022-04-21 18:13:08,505 DEBUG    [meta_explanation_session.py:228] total rho_expl is 1.501
+2022-04-21 18:13:08,505 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:13:08,505 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.001
+2022-04-21 18:13:08,505 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:13:08,505 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:13:08,506 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:13:08,506 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10078.48865383252, 9297.369913084143, 7143.832204465492, 6508.251982139453, 6316.833955459095]
+2022-04-21 18:13:08,506 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:13:08,506 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:13:12,240 DEBUG    [meta_explanation_session.py:261] [(0.029617006122634394, 0.043811925666691495), (0.02714044973758446, 0.041418224139333173), (0.019651784978458445, 0.03413638126449236), (0.016610116717569654, 0.031789165010509324), (0.017263280813744356, 0.03227823589714481)]
+2022-04-21 18:13:12,240 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:13:12,241 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 5), (2, 5)]
+2022-04-21 18:13:13,417 DEBUG    [meta_explanation_session.py:228] total rho_expl is 1.501
+2022-04-21 18:13:13,417 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:13:13,417 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.001
+2022-04-21 18:13:13,417 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:13:13,417 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:13:13,418 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:13:13,418 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10045.852551194057, 9242.150950343223, 7096.749448160189, 6452.0135435278, 6437.161639774109]
+2022-04-21 18:13:13,418 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:13:13,418 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:13:17,146 DEBUG    [meta_explanation_session.py:261] [(0.029450994558949936, 0.04373100434515371), (0.025145108852672363, 0.039398306507319285), (0.01977753865167653, 0.03425670795732336), (0.013643067504054588, 0.028770631732920583), (0.016916008580997417, 0.03197016834903652)]
+2022-04-21 18:13:17,147 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:13:17,147 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 5), (4, 5)]
+2022-04-21 18:13:18,289 DEBUG    [meta_explanation_session.py:228] total rho_expl is 1.501
+2022-04-21 18:13:18,289 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:13:18,289 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.001
+2022-04-21 18:13:18,289 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:13:18,289 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:13:18,289 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:13:18,289 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10202.341679059342, 9239.759601093625, 7149.287191300527, 6448.119774338579, 6385.639988517629]
+2022-04-21 18:13:18,289 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:13:18,289 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:13:21,979 DEBUG    [meta_explanation_session.py:261] [(0.0301741484224266, 0.04445796484768581), (0.026374014737387392, 0.040705523899164174), (0.01976663813996581, 0.034307660747897116), (0.01719988739577119, 0.0323363677226429), (0.014627425479640393, 0.029574071251021322)]
+2022-04-21 18:13:21,979 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:13:21,980 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 5), (2, 5)]
+2022-04-21 18:13:23,148 DEBUG    [meta_explanation_session.py:228] total rho_expl is 1.501
+2022-04-21 18:13:23,148 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:13:23,148 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.001
+2022-04-21 18:13:23,148 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:13:23,148 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:13:23,149 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:13:23,149 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10057.412929077083, 9236.605158424816, 7049.796858962838, 6468.780962667099, 6382.9858598075225]
+2022-04-21 18:13:23,149 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:13:23,149 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:13:26,840 DEBUG    [meta_explanation_session.py:261] [(0.029165478767051955, 0.04338106010822471), (0.027385220233433677, 0.04168755304846098), (0.019366686135024628, 0.033875914448699175), (0.016376643438076464, 0.03153518481149482), (0.016726474978153022, 0.03173465553548609)]
+2022-04-21 18:13:26,840 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:13:26,841 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 5), (2, 5)]
+2022-04-21 18:13:28,14 DEBUG    [meta_explanation_session.py:228] total rho_expl is 1.501
+2022-04-21 18:13:28,14 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:13:28,14 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.001
+2022-04-21 18:13:28,14 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:13:28,14 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:13:28,14 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:13:28,14 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10102.39566691783, 9236.244356154113, 7106.782690783285, 6479.577375822032, 6409.7177707523]
+2022-04-21 18:13:28,14 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:13:28,14 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:13:31,767 DEBUG    [meta_explanation_session.py:261] [(0.03074065599031296, 0.045010191638817684), (0.028088867569692488, 0.04240028716808834), (0.018785154773961928, 0.03325404663414275), (0.015729847763716023, 0.030864696700500394), (0.0157723084322523, 0.030782943277990325)]
+2022-04-21 18:13:31,767 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:13:31,768 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 5), (2, 5)]
+2022-04-21 18:13:32,926 DEBUG    [meta_explanation_session.py:228] total rho_expl is 1.501
+2022-04-21 18:13:32,926 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:13:32,926 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.001
+2022-04-21 18:13:32,926 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:13:32,926 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:13:32,927 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:13:32,927 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10082.191516140512, 9219.67059627531, 7089.278622061434, 6435.445177074934, 6387.378651303831]
+2022-04-21 18:13:32,927 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:13:32,927 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:13:36,652 DEBUG    [meta_explanation_session.py:261] [(0.030269106234581327, 0.04451479472167441), (0.027857788092100867, 0.04217165207154034), (0.01953022944971727, 0.03405094650398819), (0.01822591179308772, 0.03342242157220468), (0.017882749840216334, 0.03292539514050025)]
+2022-04-21 18:13:36,653 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:13:36,654 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 5), (2, 5)]
+2022-04-21 18:13:37,898 INFO     [meta_explanation_session.py:25] 82 predicates for the explanation.
+2022-04-21 18:13:37,898 INFO     [run.py:53] loaded dataset with 1000000 rows and columns ['status', 'credit-history', 'purpose', 'saving-account', 'employment', 'installment-rate', 'sex-marst', 'other-debtors', 'residence', 'property', 'other-installment-plans', 'housing', 'existing-credits', 'job', 'people-liable', 'telephone', 'foreign-worker', 'good-credit', 'duration', 'credit-amount', 'age'].
+(`status` == "no checking account")or(`status` == "... < 0 DM")
+2022-04-21 18:13:38,565 INFO     [influence_function.py:24] Dataset relative to the question has length 542650
+2022-04-21 18:14:21,613 DEBUG    [meta_explanation_session.py:169] 82 predicates and their influences & scores have been loaded.
+2022-04-21 18:14:21,621 DEBUG    [meta_explanation_session.py:173] 
+       influence         score
+count  82.000000     82.000000
+mean    0.000333     91.117826
+std     0.014304   3912.349348
+min    -0.057912 -15839.828271
+25%    -0.004585  -1253.962692
+50%     0.000003      0.761900
+75%     0.005414   1480.750210
+max     0.036828  10073.068379
+2022-04-21 18:14:21,621 DEBUG    [meta_explanation_session.py:228] total rho_expl is 1.001
+2022-04-21 18:14:21,621 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:14:21,621 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:14:21,621 DEBUG    [meta_explanation_session.py:231] rho_rank is 0.001
+2022-04-21 18:14:21,621 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:14:21,622 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:14:21,622 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10085.756557153429, 9323.341145800658, 7233.539450162454, 6559.836672659165, 6349.797734737358]
+2022-04-21 18:14:21,622 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:14:21,622 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:14:25,403 DEBUG    [meta_explanation_session.py:261] [(0.036443864320826566, 0.03708097049391846), (0.033530090299956114, 0.03416952831212802), (0.02567839964970515, 0.02632742917544669), (0.02332891006251202, 0.02400594256953048), (0.022770466258484716, 0.023441485669838422)]
+2022-04-21 18:14:25,403 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:14:25,404 DEBUG    [meta_explanation_session.py:280] [(1, 77), (1, 77), (1, 77), (1, 77), (1, 79)]
+2022-04-21 18:14:26,575 DEBUG    [meta_explanation_session.py:228] total rho_expl is 1.001
+2022-04-21 18:14:26,575 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:14:26,575 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:14:26,575 DEBUG    [meta_explanation_session.py:231] rho_rank is 0.001
+2022-04-21 18:14:26,575 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:14:26,576 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:14:26,576 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10205.580311739419, 9263.7522480976, 7128.54897580256, 6498.322603888964, 6344.576390509317]
+2022-04-21 18:14:26,576 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:14:26,576 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:14:30,390 DEBUG    [meta_explanation_session.py:261] [(0.036414504331264884, 0.03705161950929989), (0.033552795963678855, 0.03419218983893034), (0.0256489931583592, 0.026298120514199372), (0.023357146693173396, 0.024034211404142986), (0.022833428553285937, 0.023504362401794484)]
+2022-04-21 18:14:30,390 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:14:30,391 DEBUG    [meta_explanation_session.py:280] [(1, 62), (1, 79), (1, 77), (1, 79), (1, 82)]
+2022-04-21 18:14:31,536 DEBUG    [meta_explanation_session.py:228] total rho_expl is 1.001
+2022-04-21 18:14:31,536 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:14:31,536 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:14:31,536 DEBUG    [meta_explanation_session.py:231] rho_rank is 0.001
+2022-04-21 18:14:31,536 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:14:31,536 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:14:31,536 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10224.444217337643, 9360.475112391583, 7076.7590597994495, 6467.164332027601, 6392.1255712937445]
+2022-04-21 18:14:31,536 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:14:31,536 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:14:35,299 DEBUG    [meta_explanation_session.py:261] [(0.03642124708792209, 0.03705839228428378), (0.033549347368151815, 0.03418871900539963), (0.025631249603612155, 0.02628029638362742), (0.023345858072186268, 0.024022878141018576), (0.022782623451088113, 0.023453483124428853)]
+2022-04-21 18:14:35,299 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:14:35,302 DEBUG    [meta_explanation_session.py:280] [(1, 36), (1, 75), (1, 77), (1, 77), (1, 77)]
+2022-04-21 18:14:36,496 DEBUG    [meta_explanation_session.py:228] total rho_expl is 1.001
+2022-04-21 18:14:36,497 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:14:36,497 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:14:36,497 DEBUG    [meta_explanation_session.py:231] rho_rank is 0.001
+2022-04-21 18:14:36,497 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:14:36,497 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:14:36,497 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10050.543215991327, 9277.908185962315, 7140.582305945394, 6504.925006618246, 6352.769229224863]
+2022-04-21 18:14:36,497 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:14:36,497 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:14:40,224 DEBUG    [meta_explanation_session.py:261] [(0.03652084266517417, 0.0371580750486882), (0.03352397331860201, 0.034163274528781366), (0.025619670160766557, 0.026268695514342785), (0.023310710834604575, 0.023987794321922655), (0.022831654702503045, 0.0235025649119882)]
+2022-04-21 18:14:40,224 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:14:40,225 DEBUG    [meta_explanation_session.py:280] [(1, 77), (1, 75), (1, 77), (1, 77), (1, 77)]
+2022-04-21 18:14:41,385 DEBUG    [meta_explanation_session.py:228] total rho_expl is 1.001
+2022-04-21 18:14:41,385 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:14:41,385 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:14:41,385 DEBUG    [meta_explanation_session.py:231] rho_rank is 0.001
+2022-04-21 18:14:41,385 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:14:41,386 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:14:41,386 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10107.633445128458, 9264.90285051344, 7091.93406048302, 6568.37366130436, 6367.408735656691]
+2022-04-21 18:14:41,386 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:14:41,386 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:14:45,134 DEBUG    [meta_explanation_session.py:261] [(0.03656217855472769, 0.03719945165842291), (0.03349257192355017, 0.03413189069542393), (0.025597551412443038, 0.026246590174282956), (0.023423399531195096, 0.024100486912125543), (0.02278675973957228, 0.023457755026286282)]
+2022-04-21 18:14:45,135 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:14:45,135 DEBUG    [meta_explanation_session.py:280] [(1, 72), (1, 62), (1, 77), (1, 82), (1, 77)]
+2022-04-21 18:14:46,343 DEBUG    [meta_explanation_session.py:228] total rho_expl is 1.001
+2022-04-21 18:14:46,343 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:14:46,345 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:14:46,345 DEBUG    [meta_explanation_session.py:231] rho_rank is 0.001
+2022-04-21 18:14:46,345 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:14:46,346 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:14:46,346 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10064.529233608198, 9256.769780201552, 7102.428867598136, 6450.607696014148, 6530.7820102305295]
+2022-04-21 18:14:46,346 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-history` == "no credits taken/all credits paid back duly", `credit-amount` == "(500, 2500]"]
+2022-04-21 18:14:46,346 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:14:50,107 DEBUG    [meta_explanation_session.py:261] [(0.03651819335912188, 0.03715544502750195), (0.03359519729020704, 0.03423457739367261), (0.02562543302116567, 0.02627454196598613), (0.022817023392437512, 0.023487912662553526), (0.02336675199095188, 0.02404378596929416)]
+2022-04-21 18:14:50,107 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:14:50,108 DEBUG    [meta_explanation_session.py:280] [(1, 72), (1, 75), (1, 77), (1, 80), (1, 75)]
+2022-04-21 18:14:51,290 DEBUG    [meta_explanation_session.py:228] total rho_expl is 1.001
+2022-04-21 18:14:51,290 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:14:51,290 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:14:51,290 DEBUG    [meta_explanation_session.py:231] rho_rank is 0.001
+2022-04-21 18:14:51,290 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:14:51,290 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:14:51,290 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10024.078180366123, 9212.7063504706, 7143.526939685379, 6490.991501493686, 6434.332743657331]
+2022-04-21 18:14:51,290 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:14:51,290 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:14:55,768 DEBUG    [meta_explanation_session.py:261] [(0.03654713124814481, 0.03718438594086928), (0.03358404460724911, 0.03422345450458819), (0.02570213128303621, 0.026351289875105332), (0.02335560583121906, 0.024032654141589137), (0.02282427455000301, 0.02349526760558557)]
+2022-04-21 18:14:55,768 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:14:55,769 DEBUG    [meta_explanation_session.py:280] [(1, 65), (1, 41), (1, 77), (1, 77), (1, 41)]
+2022-04-21 18:14:57,423 DEBUG    [meta_explanation_session.py:228] total rho_expl is 1.001
+2022-04-21 18:14:57,423 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:14:57,423 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:14:57,423 DEBUG    [meta_explanation_session.py:231] rho_rank is 0.001
+2022-04-21 18:14:57,423 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:14:57,424 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:14:57,424 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10056.45040606443, 9289.614848194828, 7065.919089412185, 6506.443683647152, 6286.183292017337]
+2022-04-21 18:14:57,424 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:14:57,424 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:15:01,714 DEBUG    [meta_explanation_session.py:261] [(0.036555666732614595, 0.037192920773263985), (0.03351882700959169, 0.03415817156017053), (0.025715366122142883, 0.026364448940503018), (0.02337431397892654, 0.02405138278107722), (0.02284466965588824, 0.02351565151686405)]
+2022-04-21 18:15:01,714 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:15:01,715 DEBUG    [meta_explanation_session.py:280] [(1, 79), (1, 80), (1, 77), (1, 82), (1, 77)]
+2022-04-21 18:15:03,14 DEBUG    [meta_explanation_session.py:228] total rho_expl is 1.001
+2022-04-21 18:15:03,14 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:15:03,14 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:15:03,14 DEBUG    [meta_explanation_session.py:231] rho_rank is 0.001
+2022-04-21 18:15:03,14 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:15:03,15 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:15:03,15 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10143.705903878834, 9225.075920577845, 7162.021921961878, 6488.900924683336, 6332.379410684758]
+2022-04-21 18:15:03,15 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:15:03,15 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:15:07,11 DEBUG    [meta_explanation_session.py:261] [(0.03652679274454392, 0.03716406751653931), (0.03353908956184535, 0.03417847931504392), (0.02560722035018206, 0.026256283651611898), (0.023353557621268152, 0.02403061500875067), (0.022885548449334523, 0.023556539606564637)]
+2022-04-21 18:15:07,11 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:15:07,14 DEBUG    [meta_explanation_session.py:280] [(1, 72), (1, 79), (1, 80), (1, 77), (1, 80)]
+2022-04-21 18:15:08,170 DEBUG    [meta_explanation_session.py:228] total rho_expl is 1.001
+2022-04-21 18:15:08,170 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:15:08,170 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:15:08,170 DEBUG    [meta_explanation_session.py:231] rho_rank is 0.001
+2022-04-21 18:15:08,170 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:15:08,171 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:15:08,171 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10048.830092682543, 9270.004717324433, 7082.266566982918, 6641.978846552926, 6346.42461256634]
+2022-04-21 18:15:08,171 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:15:08,171 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:15:11,877 DEBUG    [meta_explanation_session.py:261] [(0.03649808738583031, 0.037135251024295185), (0.03356841449103392, 0.03420786284295838), (0.025573455971579947, 0.026222534890348502), (0.023332069431508663, 0.024009066371527815), (0.022842207119307862, 0.02351312408694219)]
+2022-04-21 18:15:11,877 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:15:11,878 DEBUG    [meta_explanation_session.py:280] [(1, 52), (1, 72), (1, 72), (1, 77), (1, 79)]
+2022-04-21 18:15:13,123 INFO     [meta_explanation_session.py:25] 82 predicates for the explanation.
+2022-04-21 18:15:13,123 INFO     [run.py:53] loaded dataset with 1000000 rows and columns ['status', 'credit-history', 'purpose', 'saving-account', 'employment', 'installment-rate', 'sex-marst', 'other-debtors', 'residence', 'property', 'other-installment-plans', 'housing', 'existing-credits', 'job', 'people-liable', 'telephone', 'foreign-worker', 'good-credit', 'duration', 'credit-amount', 'age'].
+(`status` == "no checking account")or(`status` == "... < 0 DM")
+2022-04-21 18:15:13,797 INFO     [influence_function.py:24] Dataset relative to the question has length 542650
+2022-04-21 18:16:01,708 DEBUG    [meta_explanation_session.py:169] 82 predicates and their influences & scores have been loaded.
+2022-04-21 18:16:01,716 DEBUG    [meta_explanation_session.py:173] 
+       influence         score
+count  82.000000     82.000000
+mean    0.000333     91.117826
+std     0.014304   3912.349348
+min    -0.057912 -15839.828271
+25%    -0.004585  -1253.962692
+50%     0.000003      0.761900
+75%     0.005414   1480.750210
+max     0.036828  10073.068379
+2022-04-21 18:16:01,716 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:16:01,716 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:16:01,716 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:16:01,716 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:16:01,716 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:16:01,717 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:16:01,717 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10158.49379362494, 9251.401970592107, 7101.8704684077475, 6448.516624411489, 6303.588613060177]
+2022-04-21 18:16:01,717 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:16:01,717 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:16:05,920 DEBUG    [meta_explanation_session.py:261] [(0.03650036251753649, 0.0371375582335762), (0.0334931773948767, 0.03413243330040631), (0.0256167635359034, 0.02626574005268618), (0.023345466491014932, 0.0240225778434119), (0.0228132997531114, 0.02348428742492679)]
+2022-04-21 18:16:05,920 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:16:05,922 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 5), (4, 5)]
+2022-04-21 18:16:07,377 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:16:07,377 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:16:07,377 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:16:07,377 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:16:07,377 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:16:07,378 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:16:07,378 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10126.471525201956, 9334.45781248561, 7062.7650845572125, 6475.407484597456, 6322.4066259921465]
+2022-04-21 18:16:07,378 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:16:07,378 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:16:12,114 DEBUG    [meta_explanation_session.py:261] [(0.03650160790654859, 0.037138784986132135), (0.03348189312100364, 0.03412112565627046), (0.0256223464662097, 0.026271379180771517), (0.023352078477495486, 0.02402915071187123), (0.022809119768342254, 0.02348010475728444)]
+2022-04-21 18:16:12,114 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:16:12,115 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 5), (2, 5)]
+2022-04-21 18:16:13,564 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:16:13,564 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:16:13,564 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:16:13,564 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:16:13,564 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:16:13,565 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:16:13,565 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10041.296932053241, 9280.79688459284, 7168.658611223196, 6480.277579882318, 6294.569846710452]
+2022-04-21 18:16:13,565 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:16:13,565 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:16:17,834 DEBUG    [meta_explanation_session.py:261] [(0.03647302894923751, 0.0371101298727031), (0.03349370224615465, 0.034133045524726735), (0.0256520435852758, 0.026301101545173185), (0.023358075149340254, 0.024035237835329775), (0.022810629521922626, 0.023481552974893)]
+2022-04-21 18:16:17,834 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:16:17,835 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 5), (2, 5)]
+2022-04-21 18:16:19,167 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:16:19,167 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:16:19,167 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:16:19,167 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:16:19,167 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:16:19,168 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:16:19,168 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10181.356092288666, 9293.598310392355, 7150.918710062273, 6488.51516510875, 6322.397270076627]
+2022-04-21 18:16:19,168 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:16:19,168 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:16:23,20 DEBUG    [meta_explanation_session.py:261] [(0.03646025711562865, 0.03709744041699383), (0.03347828976495436, 0.03411762298666709), (0.025543805492764162, 0.026192852659864794), (0.023319857638744702, 0.02399689025351376), (0.02287635079153237, 0.023547364749702888)]
+2022-04-21 18:16:23,20 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:16:23,21 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (4, 5), (2, 5)]
+2022-04-21 18:16:24,201 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:16:24,202 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:16:24,202 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:16:24,202 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:16:24,202 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:16:24,202 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:16:24,203 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10068.11245316211, 9270.545720447339, 7122.891613491469, 6506.774054218636, 6320.661012070318]
+2022-04-21 18:16:24,203 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:16:24,203 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:16:28,29 DEBUG    [meta_explanation_session.py:261] [(0.03648310393154748, 0.03712022569475734), (0.033525067641006635, 0.03416435965731282), (0.025602616679432984, 0.026251673157272497), (0.02329679781267802, 0.023973784279424502), (0.022800068421802298, 0.023470971901759476)]
+2022-04-21 18:16:28,29 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:16:28,33 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 5), (2, 5)]
+2022-04-21 18:16:29,260 DEBUG    [meta_explanation_session.py:228] total rho_expl is 2.0
+2022-04-21 18:16:29,260 DEBUG    [meta_explanation_session.py:229] rho_topk is 0.5
+2022-04-21 18:16:29,260 DEBUG    [meta_explanation_session.py:230] rho_ci is 0.5
+2022-04-21 18:16:29,260 DEBUG    [meta_explanation_session.py:231] rho_rank is 1.0
+2022-04-21 18:16:29,260 INFO     [meta_explanation_session.py:237] computing top k
+2022-04-21 18:16:29,261 INFO     [noisy_topk.py:25] true_topk_scores: [10073.068378785641, 9256.672959522752, 7100.533771243636, 6478.751354024425, 6333.094585039961]
+2022-04-21 18:16:29,261 INFO     [noisy_topk.py:26] gumbel_topk_scores: [10057.065275921457, 9289.65961547291, 7102.930846187963, 6450.752918324884, 6349.914062007224]
+2022-04-21 18:16:29,261 DEBUG    [meta_explanation_session.py:244] [`existing-credits` == "1", `job` == "skilled employee / official", `sex-marst` == "male : married/widowed", `credit-amount` == "(500, 2500]", `credit-history` == "no credits taken/all credits paid back duly"]
+2022-04-21 18:16:29,261 INFO     [meta_explanation_session.py:250] computing influence ci
+2022-04-21 18:16:33,63 DEBUG    [meta_explanation_session.py:261] [(0.03662266841639365, 0.037259973213251744), (0.033484098540668916, 0.03412344197159127), (0.025583828264826636, 0.026232836771997912), (0.0233374337644026, 0.02401444700472916), (0.022840361529313912, 0.023511320726420155)]
+2022-04-21 18:16:33,64 INFO     [meta_explanation_session.py:267] computing rank ci
+2022-04-21 18:16:33,67 DEBUG    [meta_explanation_session.py:280] [(1, 1), (1, 2), (2, 4), (2, 5), (2, 5)]
