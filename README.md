@@ -1,4 +1,4 @@
-# Private-Explanation-System
+# DPXPlain: Explaining Query Results Under Differential Privacy
 
 ## Framework
 
