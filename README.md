@@ -1,5 +1,4 @@
 # Private-Explanation-System
---
 
 ## Data
 
@@ -16,3 +15,7 @@ AGE,
 EDUC,
 and INCTOT
 - NYCTaxi: https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page
+
+## Demo
+
+You can find demos from the demo folder. To run, you need data prepared, which is not included in this repo, but can be downloaded according to the instructions in the relevant data folders.
