@@ -1,5 +1,9 @@
 # Private-Explanation-System
 
+## Framework
+
+Please check the folder /privex
+
 ## Data
 
 - Adult: https://archive.ics.uci.edu/ml/datasets/adult
