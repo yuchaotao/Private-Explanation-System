@@ -23,3 +23,7 @@ and INCTOT
 ## Demo
 
 You can find demos from the demo folder. To run, you need data prepared, which is not included in this repo, but can be downloaded according to the instructions in the relevant data folders.
+
+## Experiments
+
+Please find the notebooks in experiment-2/finding for more details.
