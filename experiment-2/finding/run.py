@@ -111,6 +111,7 @@ def main_experiment(default, controls = [], reset=False):
         fprefix = f'./intermediates/{hashed}'
         if len(glob.glob(fprefix + '*')) < setting['reps'] or reset == True:
             print(setting)
+            print(fprefix)
             run(
                 dataset =                dataset,
                 scale =                  setting['scale'],
@@ -212,27 +213,27 @@ if __name__ == '__main__':
 #             controls += [setting_change + [('k', -1), ('rho_topk', rho), ('topk_only', True)] for setting_change in invalid]
 #         main_experiment(default = default, controls = controls)
 
-#     for default, questions in zip(
-#         [ipums_default.default, german_default.default], 
-#         [ipums_valid.questions, german_valid.questions],
-#     ):
-#         controls = []
-#         for rho in [0.001, 0.005, 0.01, 0.05, 0.1, 0.5, 1, 2, 5, 10]:
-#             controls += [setting_change + [('rho_influ', rho)] for setting_change in questions]
-#             controls += [setting_change + [('rho_rank', rho)] for setting_change in questions]
-#         for gamma in np.r_[np.linspace(0.1, 0.9, 9), [0.95, 0.99]]:
-#             controls += [setting_change + [('gamma', gamma)] for setting_change in questions]
-#         main_experiment(default = default, controls = controls)   
-
     for default, questions in zip(
         [ipums_default.default, german_default.default], 
         [ipums_valid.questions, german_valid.questions],
     ):
         controls = []
-#         for k in [3, 4, 5, 6, 7, 8, 9, 10, 15, 20]:
-        for k in [5]:
-            controls += [setting_change + [('k', k)] for setting_change in questions]
+        for rho in [0.001, 0.005, 0.01, 0.05, 0.1, 0.5, 1, 2, 5, 10]:
+            controls += [setting_change + [('rho_influ', rho)] for setting_change in questions]
+#             controls += [setting_change + [('rho_rank', rho)] for setting_change in questions]
+        for gamma in np.r_[np.linspace(0.1, 0.9, 9), [0.95, 0.99]]:
+            controls += [setting_change + [('gamma', gamma)] for setting_change in questions]
         main_experiment(default = default, controls = controls, reset=True) 
+
+#     for default, questions in zip(
+#         [ipums_default.default, german_default.default], 
+#         [ipums_valid.questions, german_valid.questions],
+#     ):
+#         controls = []
+# #         for k in [3, 4, 5, 6, 7, 8, 9, 10, 15, 20]:
+#         for k in [5]:
+#             controls += [setting_change + [('k', k)] for setting_change in questions]
+#         main_experiment(default = default, controls = controls, reset=True) 
 
 #     for default, valid, invalid in zip(
 #         [ipums_default.default, german_default.default], 

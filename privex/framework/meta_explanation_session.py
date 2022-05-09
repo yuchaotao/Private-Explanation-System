@@ -175,23 +175,8 @@ class MetaExplanationSession(ABC):
         t_end = time.time()
         self.t_phase_3_preprocessing = t_end - t_start
         
-    def phase_3_true_top_k(self, k):
-        scores = self.predicates_with_scores
-        influences_and_scores = self.predicates_with_influences_and_scores
-        true_topk = heapq.nlargest(k, scores.keys(), key=scores.get)
-        
-        positive_influences = len([x for x in self.predicates_with_influences_and_scores.values() if x['influence'] / self.question_point > 0.01])
-        print('Positive Influences: ', positive_influences)
-        
-        result = pd.DataFrame()
-        result['topk'] = true_topk
-        result['rel-influence'] = [f"{influences_and_scores[p]['influence'] / self.question_point * 100:.2f}%" for p in true_topk]
-        return result
     
-    def phase_3_prepare_explanation(self, k, rho, split_factor, topk_only = False, random_seed = None):
-        if random_seed is not None:
-            np.random.seed(random_seed)
-            
+    def phase_3_prepare_explanation(self, k, rho, split_factor, topk_only = False, random_seed_topk = None, random_seed_influci = None, random_seed_rankci = None):
         if k == -1:
             k = len(self.predicates)
             
@@ -232,6 +217,9 @@ class MetaExplanationSession(ABC):
         
         score_sensitivity = self.influence_function.score_sensitivity()
         
+        
+        if random_seed_topk is not None:
+            np.random.seed(random_seed_topk)
         # Find the noisy top-k predicates
         t_start = time.time()
         logger.info('computing top k')
@@ -253,6 +241,8 @@ class MetaExplanationSession(ABC):
             self.t_phase_3_rankci = 0
             return
         
+        if random_seed_influci is not None:
+            np.random.seed(random_seed_influci)
         # Find the CI of predicate influence
         t_start = time.time()
         logger.info('computing influence ci')
@@ -270,6 +260,8 @@ class MetaExplanationSession(ABC):
         t_end = time.time()
         self.t_phase_3_influci = t_end - t_start
             
+        if random_seed_rankci is not None:
+            np.random.seed(random_seed_rankci)
         # Find the rank ci of predicate
         t_start = time.time()
         logger.info('computing rank ci')
@@ -292,7 +284,33 @@ class MetaExplanationSession(ABC):
         self.topk_explanation_predicates = topk_explanation_predicates
         self.topk_influence_ci = topk_influence_ci
         self.topk_rank_ci = topk_rank_ci
-              
+            
+    def relative_influence(self, influence):
+        qtype = self.groupby_query.agg
+        noisy_question_point = self.question.evaluation_by_query_answers(self.query_answers)
+        noisy_group_sizes = [record['res']['basic_query_answers'][1]['val'] for query, record in self.query_answers.items() if self.question.weights[query] != 0]
+        
+        if qtype in ['CNT', 'SUM']:
+            relative_influence = influence / np.abs(noisy_question_point)
+        else:
+            relative_influence = influence / np.abs(noisy_question_point) / (np.abs(max(noisy_group_sizes)) + 1)
+        
+        return relative_influence
+    
+    def phase_3_true_top_k(self, k):
+        scores = self.predicates_with_scores
+        influences_and_scores = self.predicates_with_influences_and_scores
+        true_topk = heapq.nlargest(k, scores.keys(), key=scores.get)
+        
+        positive_influences = len([x for x in self.predicates_with_influences_and_scores.values() if x['influence'] / self.question_point > 0.01])
+        print('Positive Influences: ', positive_influences)
+        
+        result = pd.DataFrame()
+        result['topk'] = true_topk
+        result['rel-influence'] = [f"{self.relative_influence(influences_and_scores[p]['score'])* 100:.2f}%" for p in true_topk]
+        return result
+        
+            
     def phase_3_show_explanation_table(self):
         topk_explanation_predicates = self.topk_explanation_predicates
         topk_influence_ci = self.topk_influence_ci
@@ -307,8 +325,8 @@ class MetaExplanationSession(ABC):
             f'Inf {gammastr}-CI R': [x[1] for x in topk_influence_ci],
 #             f'Rel Inf {percentageGammaStr}-CI L': [f'{x[0] / self.question_ci[1]*100:.0f}%' for x in topk_influence_ci],
 #             f'Rel Inf {percentageGammaStr}-CI R': [f'{x[1] / self.question_ci[0]*100:.0f}%' for x in topk_influence_ci],
-            f'Rel Inf {percentageGammaStr}-CI L': [f'{x[0] / self.question_point*100:.2f}%' for x in topk_influence_ci],
-            f'Rel Inf {percentageGammaStr}-CI R': [f'{x[1] / self.question_point*100:.2f}%' for x in topk_influence_ci],
+            f'Rel Inf {percentageGammaStr}-CI L': [f'{self.relative_influence(x[0])*100:.2f}%' for x in topk_influence_ci],
+            f'Rel Inf {percentageGammaStr}-CI R': [f'{self.relative_influence(x[1])*100:.2f}%' for x in topk_influence_ci],
             f'Rnk {gammastr}-CI L': [x[0] for x in topk_rank_ci], 
             f'Rnk {gammastr}-CI R': [x[1] for x in topk_rank_ci], 
         })
@@ -326,6 +344,7 @@ class MetaExplanationSession(ABC):
         return explanation_table_1, explanation_table_2
         
     def store_important_intermediates(self, foutp):
+        relative_influ_ci = [[self.relative_influence(x) for x in ci] for ci in self.topk_influence_ci]
         to_store = {
             'QuestionCI': self.question_ci,
             'QuestionPoint': self.question_point,
@@ -337,6 +356,7 @@ class MetaExplanationSession(ABC):
 #             'GroundQueryAnswers': self.raw_query_answers,
             'Topk': self.topk_explanation_predicates,
             'InfluCI': self.topk_influence_ci,
+            'RelInfluCI': relative_influ_ci,
             'RankCI': self.topk_rank_ci,
             'InfluScores': self.predicates_with_influences_and_scores,
             't_phase_1': self.t_phase_1,

@@ -39,7 +39,7 @@ class PrivateCIofInfluence(MetaPrivateCIofInfluence):
         question = influence_function.question
         weights = list(question.weights.values())
         
-        sensitivity = 3 * np.linalg.norm(weights, ord=1) * question.groupby_query.sensitivity
+        sensitivity = 2 * np.linalg.norm(weights, ord=1) * question.groupby_query.sensitivity
         influence = influence_function(explanation_predicate)['influence']
         gs = GaussianMechanism(influence, rho, sensitivity) 
         answer = gs()
@@ -49,7 +49,20 @@ class PrivateCIofInfluence(MetaPrivateCIofInfluence):
         return ci
     
     def __call__(self, explanation_predicate, influence_function, rho, gamma):
-        if influence_function.question.groupby_query.agg == 'AVG':
-            return self.ci_avg(explanation_predicate, influence_function, rho, gamma)
-        else:
-            return self.ci_cnt_sum(explanation_predicate, influence_function, rho, gamma)
+#         if influence_function.question.groupby_query.agg == 'AVG':
+#             return self.ci_avg(explanation_predicate, influence_function, rho, gamma)
+#         else:
+#             return self.ci_cnt_sum(explanation_predicate, influence_function, rho, gamma)
+        question = influence_function.question
+        weights = list(question.weights.values())
+        
+        sensitivity = influence_function.score_sensitivity()
+        influence = influence_function(explanation_predicate)['score']
+        gs = GaussianMechanism(influence, rho, sensitivity) 
+        answer = gs()
+        sigma = gs.sigma
+        
+        ci = gaussian_ci(answer, sigma, gamma)
+        return ci
+
+        
