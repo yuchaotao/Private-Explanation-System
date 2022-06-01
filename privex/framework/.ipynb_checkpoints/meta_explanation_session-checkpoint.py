@@ -126,17 +126,17 @@ class MetaExplanationSession(ABC):
     def phase_2_show_question_point(self):
         return self.question_point
         
-    def phase_2_ground_truth_ci(self, rho, gamma, B = 1000):
-        qevals = []
-        noisy_query_answers = self.question.groupby_query(self.dataset, rho)
-        for i in range(B):
-            for query in noisy_query_answers:
-                noisy_query_answers[query]['res']['query_answer']['val'] = noisy_query_answers[query]['res']['query_answer']['generator']()
-            qeval = self.question.evaluation_by_query_answers(noisy_query_answers)
-            qevals.append(qeval)
-        ci = (np.quantile(qevals, (1-gamma)/2), np.quantile(qevals, (1+gamma)/2))
-        self.ground_truth_ci = ci
-        return ci
+#     def phase_2_ground_truth_ci(self, rho, gamma, B = 1000):
+#         qevals = []
+#         noisy_query_answers = self.question.groupby_query(self.dataset, rho)
+#         for i in range(B):
+#             for query in noisy_query_answers:
+#                 noisy_query_answers[query]['res']['query_answer']['val'] = noisy_query_answers[query]['res']['query_answer']['generator']()
+#             qeval = self.question.evaluation_by_query_answers(noisy_query_answers)
+#             qevals.append(qeval)
+#         ci = (np.quantile(qevals, (1-gamma)/2), np.quantile(qevals, (1+gamma)/2))
+#         self.ground_truth_ci = ci
+#         return ci
         
     def phase_3_submit_explanation_request(self):
         t_start = time.time()
@@ -293,7 +293,7 @@ class MetaExplanationSession(ABC):
         if qtype in ['CNT', 'SUM']:
             relative_influence = influence / np.abs(noisy_question_point)
         else:
-            relative_influence = influence / np.abs(noisy_question_point) / (np.abs(max(noisy_group_sizes)) + 1)
+            relative_influence = influence / np.abs(noisy_question_point) / (np.abs(min(noisy_group_sizes)))
         
         return relative_influence
     
@@ -349,11 +349,11 @@ class MetaExplanationSession(ABC):
             'QuestionCI': self.question_ci,
             'QuestionPoint': self.question_point,
             'GroundQuestionPoint': self.question.evaluation(self.dataset),
-            'GroundQuestionCI': self.phase_2_ground_truth_ci(self.query_rho, self.gamma),
+#             'GroundQuestionCI': self.phase_2_ground_truth_ci(self.query_rho, self.gamma),
             'Question': self.question,
-#             'Query': self.groupby_query,
-#             'QueryAnswers': self.query_answers,
-#             'GroundQueryAnswers': self.raw_query_answers,
+            'Query': self.groupby_query,
+            'QueryAnswers': self.query_answers,
+            'GroundQueryAnswers': self.raw_query_answers,
             'Topk': self.topk_explanation_predicates,
             'InfluCI': self.topk_influence_ci,
             'RelInfluCI': relative_influ_ci,

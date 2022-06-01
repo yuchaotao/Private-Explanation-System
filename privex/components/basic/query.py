@@ -94,14 +94,14 @@ class Query():
             ans = {
                 'val': gm(),
                 'sigma': gm.sigma,
-                'generator': gm,
+#                 'generator': gm,
             }
             basic_query_answers.append(ans)
         if self.agg in ['CNT', 'SUM']:
             query_answer = {
                 'val': basic_query_answers[0]['val'],
                 'sigma': gm.sigma,
-                'generator': gm
+#                 'generator': gm
             }
         elif self.agg == 'AVG':
             query_answer = {
@@ -109,12 +109,12 @@ class Query():
                        / 
                        basic_query_answers[1]['val'],
                 'sigma': None,
-                'generator': (lambda basic_query_answers:
-                    lambda :
-                              basic_query_answers[0]['generator']()
-                              /
-                              basic_query_answers[1]['generator']()
-                )(basic_query_answers)
+#                 'generator': (lambda basic_query_answers:
+#                     lambda :
+#                               basic_query_answers[0]['generator']()
+#                               /
+#                               basic_query_answers[1]['generator']()
+#                 )(basic_query_answers)
             }
         res = {
             'query_answer': query_answer,
