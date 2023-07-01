@@ -6,7 +6,7 @@ import pandas as pd
 import numpy as np
 from sklearn.datasets import fetch_openml
 
-from privex.basic import Schema, Domain
+from privex.components.basic import Schema, Domain
 
 def save_data():
     adult = fetch_openml(name='adult', version=2)
