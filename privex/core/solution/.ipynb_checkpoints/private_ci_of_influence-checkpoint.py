@@ -57,7 +57,7 @@ class PrivateCIofInfluence(MetaPrivateCIofInfluence):
         weights = list(question.weights.values())
         
         sensitivity = influence_function.score_sensitivity()
-        influence = influence_function(explanation_predicate)['score']
+        influence = influence_function(explanation_predicate)['score'] # Notice that score is the true influence function. Check the code & paper definition if uncertain.
         gs = GaussianMechanism(influence, rho, sensitivity) 
         answer = gs()
         sigma = gs.sigma

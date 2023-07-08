@@ -2,6 +2,7 @@ from privex.components.basic.query import Query
 from privex.components.basic.predicate import Predicate
 
 from itertools import product
+import pandas as pd
 
 class GroupbyQuery():
     def __init__(self, agg, attr_agg, predicate, attr_group, schema):
@@ -30,7 +31,7 @@ class GroupbyQuery():
             D = df.query(self.predicate.to_sql())
         df_groups = dict(
             tuple(
-                D.groupby(self.attr_group)
+                D.groupby(self.attr_group[0] if len(self.attr_group) == 1 else attr_group)
             )
         )
         return df_groups
@@ -130,6 +131,21 @@ class GroupbyQuery():
             res = query(dataset, rho)
             query_answers[query]['res'] = res
         return query_answers
+    
+    def get_answer_table(self, dataset, rho):
+        answer_table = []
+        true_query_answers = self.evaluation(dataset)
+        noisy_query_answers = self.noisy_evaluation(dataset, rho)
+        for query in self.queries:
+            group = ', '.join(true_query_answers[query]['group'])
+            true_answer = true_query_answers[query]['res']['query_answer']['val']
+            noisy_answer = noisy_query_answers[query]['res']['query_answer']['val']
+            answer_table.append({
+                'group': group,
+                'true_answer': true_answer,
+                'noisy_answer': noisy_answer
+            })
+        return answer_table, pd.DataFrame(answer_table)
     
     def __call__(self, dataset, rho = None):
         if rho is not None:

@@ -176,7 +176,7 @@ class MetaExplanationSession(ABC):
         self.t_phase_3_preprocessing = t_end - t_start
         
     
-    def phase_3_prepare_explanation(self, k, rho, split_factor, topk_only = False, random_seed_topk = None, random_seed_influci = None, random_seed_rankci = None):
+    def phase_3_prepare_explanation(self, k, rho, split_factor = 0.9, topk_only = False, random_seed_topk = None, random_seed_influci = None, random_seed_rankci = None):
         if k == -1:
             k = len(self.predicates)
             
@@ -308,13 +308,16 @@ class MetaExplanationSession(ABC):
         result = pd.DataFrame()
         result['topk'] = true_topk
         result['rel-influence'] = [f"{self.relative_influence(influences_and_scores[p]['score'])* 100:.2f}%" for p in true_topk]
+        # result['rel-influence'] = [influences_and_scores[p]['influence'] for p in true_topk]
+        # result['rel-influence'] = [self.relative_influence(influences_and_scores[p]['influence']) for p in true_topk]
         return result
         
             
-    def phase_3_show_explanation_table(self):
+    def phase_3_show_explanation_table(self, withTruth = False):
         topk_explanation_predicates = self.topk_explanation_predicates
         topk_influence_ci = self.topk_influence_ci
         topk_rank_ci = self.topk_rank_ci
+        sorted_predicates = sorted(self.predicates_with_scores.keys(), key=self.predicates_with_scores.get, reverse=True)
         
         # Construct the explanation table
         gammastr = f'{self.gamma*100:.0f}'
@@ -329,6 +332,10 @@ class MetaExplanationSession(ABC):
             f'Rel Inf {percentageGammaStr}-CI R': [f'{self.relative_influence(x[1])*100:.2f}%' for x in topk_influence_ci],
             f'Rnk {gammastr}-CI L': [x[0] for x in topk_rank_ci], 
             f'Rnk {gammastr}-CI R': [x[1] for x in topk_rank_ci], 
+            f'True Rnk': [sorted_predicates.index(predicate)+1 for predicate in topk_explanation_predicates],
+            f'True Rel Inf': [
+                f"{self.relative_influence(self.predicates_with_scores[predicate])* 100:.2f}%"  # score is the true influence
+                for predicate in topk_explanation_predicates]
         })
         explanation_table = explanation_table.sort_values(
             by=[
@@ -338,8 +345,13 @@ class MetaExplanationSession(ABC):
             ascending = [False, True]
         ).reset_index(drop=True)
         
-        explanation_table_1 = explanation_table[['predicates', f'Rel Inf {percentageGammaStr}-CI L', f'Rel Inf {percentageGammaStr}-CI R', f'Rnk {gammastr}-CI L', f'Rnk {gammastr}-CI R']]
-        explanation_table_2 = explanation_table[['predicates', f'Inf {gammastr}-CI L', f'Inf {gammastr}-CI R', f'Rnk {gammastr}-CI L', f'Rnk {gammastr}-CI R']]
+        if withTruth:
+            explanation_table_1 = explanation_table[['predicates', f'Rel Inf {percentageGammaStr}-CI L', f'Rel Inf {percentageGammaStr}-CI R', f'Rnk {gammastr}-CI L', f'Rnk {gammastr}-CI R', 'True Rnk', 'True Rel Inf']]
+            explanation_table_2 = explanation_table[['predicates', f'Inf {gammastr}-CI L', f'Inf {gammastr}-CI R', f'Rnk {gammastr}-CI L', f'Rnk {gammastr}-CI R', 'True Rnk', 'True Rel Inf']]
+        else:
+            explanation_table_1 = explanation_table[['predicates', f'Rel Inf {percentageGammaStr}-CI L', f'Rel Inf {percentageGammaStr}-CI R', f'Rnk {gammastr}-CI L', f'Rnk {gammastr}-CI R']]
+            explanation_table_2 = explanation_table[['predicates', f'Inf {gammastr}-CI L', f'Inf {gammastr}-CI R', f'Rnk {gammastr}-CI L', f'Rnk {gammastr}-CI R']]
+            
         
         return explanation_table_1, explanation_table_2
         

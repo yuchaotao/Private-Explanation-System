@@ -59,6 +59,7 @@ class InfluenceFunction():
         elif agg == 'AVG':
             score = (qD - qnegpD) * min(negpgsizes)
         
+        # score is the true influence function that matches the paper
         res = {
             'influence': influence,
             'score': score

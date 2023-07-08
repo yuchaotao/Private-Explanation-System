@@ -2,3 +2,5 @@
 **/intermediates/
 *.log
 *.dat
+*.pyc
+.ipynb_checkpoints
